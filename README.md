@@ -1,2 +1,2 @@
 # RSRaven.github.io
-Junior frontend developer student works
+Student works of Junior Frontend-developer :)
