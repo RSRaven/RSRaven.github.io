@@ -1,0 +1,41 @@
+.main{
+	margin: 53px 57px;
+	width: 515px;
+	height: 754px;
+}
+
+.header{
+	border-bottom: 1px solid black;
+}
+
+.article{
+	border-bottom: 1px solid black;
+}
+
+.block{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.block span{
+	display: block;
+}
+
+.footer{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+h1{
+	text-align: center;
+}
+
+p{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+ul{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
