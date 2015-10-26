@@ -1,7 +1,11 @@
+/** {
+	margin: 0;
+	padding: 0;
+}*/
+
 .main{
-	margin: 53px 57px;
+	margin: auto;
 	width: 515px;
-	height: 754px;
 }
 
 .header{
