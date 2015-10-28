@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic);
+
+body{
+	background-color: #f9f9f9;
+	font-family: 'Open+Sans', Tahoma;
+}
+
+.wrapper{
+	background-color: #ffffff;
+	margin: 0 48px 0 46px;
+	width: 966px;
+}
+
+
+/* HEADER */
+
+.header h1{
+	margin: 50px 0 40px 0;
+}
+
+.header_menu{
+	position: relative;
+	overflow: hidden;
+	background: rgba(94,94,94,1);
+	background: -moz-linear-gradient(top, rgba(94,94,94,1) 0%, rgba(68,67,67,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(94,94,94,1)), color-stop(100%, rgba(68,67,67,1)));
+	background: -webkit-linear-gradient(top, rgba(94,94,94,1) 0%, rgba(68,67,67,1) 100%);
+	background: -o-linear-gradient(top, rgba(94,94,94,1) 0%, rgba(68,67,67,1) 100%);
+	background: -ms-linear-gradient(top, rgba(94,94,94,1) 0%, rgba(68,67,67,1) 100%);
+	background: linear-gradient(to bottom, rgba(94,94,94,1) 0%, rgba(68,67,67,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e5e5e', endColorstr='#444343', GradientType=0 );
+}
+
+.header_menu li{
+	float: left;
+}
+
+.header_menu a{
+	display: block;
+	line-height: 40px;
+	font-size: 15px;
+	color: white;
+	text-decoration: none;
+	padding: 0 43px;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+}
+
+.header_menu a:hover{
+	border-left: 1px solid #838383;
+	border-right: 1px solid #838383;
+	background: rgba(74,74,74,1);
+	background: -moz-linear-gradient(top, rgba(74,74,74,1) 0%, rgba(46,46,46,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(74,74,74,1)), color-stop(100%, rgba(46,46,46,1)));
+	background: -webkit-linear-gradient(top, rgba(74,74,74,1) 0%, rgba(46,46,46,1) 100%);
+	background: -o-linear-gradient(top, rgba(74,74,74,1) 0%, rgba(46,46,46,1) 100%);
+	background: -ms-linear-gradient(top, rgba(74,74,74,1) 0%, rgba(46,46,46,1) 100%);
+	background: linear-gradient(to bottom, rgba(74,74,74,1) 0%, rgba(46,46,46,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a4a4a', endColorstr='#2e2e2e', GradientType=0 );
+}
+
+
+/* CONTENT */
+
+
+/* FOOTER */
+
+
