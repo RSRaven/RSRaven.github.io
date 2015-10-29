@@ -2,7 +2,7 @@
 
 body{
 	background-color: #f9f9f9;
-	font-family: 'Open+Sans', Tahoma;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .wrapper{
@@ -142,6 +142,10 @@ body{
 }
 
 /* FOOTER */
+
+.footer{
+	padding-bottom: 60px;
+}
 
 .footer_menu{
 	position: relative;
