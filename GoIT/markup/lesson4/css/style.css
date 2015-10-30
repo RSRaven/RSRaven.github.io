@@ -1,0 +1,206 @@
+body{
+	background: #0c739f url(../img/background.png) repeat-x;
+	font-family: Tahoma;
+}
+
+.wrapper{
+	margin: 0 auto 10px auto;
+	background-color: white;
+	width: 1000px;
+	-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,1);
+	box-shadow: 0px 3px 10px 0px rgba(0,0,0,1);
+}
+
+/* HEADER */
+
+
+.header{
+	position: relative;
+	overflow: hidden;
+	padding: 11px 32px 0 28px;
+}
+
+.logo{
+	display: block;
+	overflow: hidden;
+	float: left;
+	padding: 0;
+}
+
+.contacts{
+	float: right;
+	line-height: 18px;
+	font-size: 12px;
+	color: #128aa7;
+}
+
+.contacts li:first-child{
+	line-height: 20px;
+	font-weight: bold;
+}
+
+.header_menu{
+	position: relative;
+	overflow: hidden;
+	clear: right;
+	padding-top: 34px;
+	font-size: 10px;
+	text-align: center;
+}
+
+.header_menu li{
+	width: 60px;
+	float: right;
+}
+
+.header_menu a, span{
+	display: block;
+	color: #128aa7;
+}
+
+/* CONTENT */
+
+.content_img{
+	display: block;
+	border-top: 1px #128aa7 solid;
+	border-bottom: 1px #138aa7 solid;
+}
+
+.content ul{
+	-webkit-box-shadow: 0px 8px 10px -4px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 8px 10px -4px rgba(0,0,0,1);
+	box-shadow: 0px 8px 10px -4px rgba(0,0,0,1);
+}
+
+.main_menu{
+	position: relative;
+	float:left;
+	width:100%;
+	line-height: 28px;	
+	border-top: 1px #cacbcb solid;
+	border-bottom: 1px #000000 solid;
+	font-size: 14px;
+	background: rgba(55,55,55,1);
+	background: -moz-linear-gradient(top, rgba(55,55,55,1) 0%, rgba(48,48,48,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(55,55,55,1)), color-stop(100%, rgba(48,48,48,1)));
+	background: -webkit-linear-gradient(top, rgba(55,55,55,1) 0%, rgba(48,48,48,1) 100%);
+	background: -o-linear-gradient(top, rgba(55,55,55,1) 0%, rgba(48,48,48,1) 100%);
+	background: -ms-linear-gradient(top, rgba(55,55,55,1) 0%, rgba(48,48,48,1) 100%);
+	background: linear-gradient(to bottom, rgba(55,55,55,1) 0%, rgba(48,48,48,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373737', endColorstr='#303030', GradientType=0 );
+}
+
+.main_menu li{
+	position:relative;
+	/*display:block;*/
+	float:left;
+	width: 14.285%;
+	text-align: center;
+	background-color: #303030;
+}
+
+.main_menu li a{
+	display: block;
+	color: white;
+	text-decoration: none;
+}
+
+.main_menu ul{
+	padding-top: 1px;
+	width: 100%;
+	list-style:none;
+	position:absolute;
+	left:-9999px; /* Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
+	opacity:0; /* Устанавливаем начальное состояние прозрачности */
+	/*-webkit-transition:0.25s linear opacity;*//* В Webkit выпадающие пункты будут проявляться */
+}
+
+.main_menu ul li{
+	/*padding: 0 40px 0 10px;*/
+	display: block;
+	width: 100%;
+	float:none;
+}
+
+.main_menu ul a{
+	white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
+	/*display:block;*/
+}
+
+.main_menu li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
+	left:0; /* Приносим его обратно на экран, когда нужно */
+	opacity:1; /* Делаем непрозрачным */
+}
+.main_menu li:hover a{
+	/*background:#6b0c36;*/
+	/*background:rgba(107,12,54,0.75);*/ /* Выглядит полупрозрачным */
+	/*text-decoration:none;*/
+}
+/*.main_menu li:hover ul a{
+	text-decoration:none;
+	-webkit-transition:-webkit-transform 0.075s linear;
+}*/
+.main_menu li:hover ul li a:hover{ /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
+	display: block;
+	/*background:#333;*/
+	/*background:rgba(51,51,51,0.75);*//* Будет полупрозрачным */
+	/*text-decoration:underline;
+	-moz-transform:scale(1.05);
+	-webkit-transform:scale(1.05);*/
+}
+
+.content_table{
+	width: 100%;
+	overflow: hidden;
+	line-height: 24px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.content_table p{
+	padding: 0 10px 10px 10px;
+}
+
+.content_table p:first-child{
+	padding: 5px 10px 0 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.column_1{
+	border-left: 1px #c7cacf solid;
+	border-right: 1px #c7cacf solid;
+	width: 208px;
+	float: left;
+	background: #edeef0;
+	padding-bottom: 20000px;
+	margin-bottom: -20000px;
+}
+
+.column_2{
+	width: 576px;
+	float: left;
+	background: white;
+	padding-bottom: 20000px;
+	margin-bottom: -20000px;
+}
+
+.column_3{
+	border-left: 1px #c7cacf solid;
+	border-right: 1px #c7cacf solid;
+	width: 208px;
+	float: right;
+	background: #edeef0;
+	padding-bottom: 20000px;
+	margin-bottom: -20000px;
+}
+
+/* FOOTER */
+
+.footer{
+	margin: 10px;
+	text-align: center;
+	font-size: 12px;
+	color: white;
+}
