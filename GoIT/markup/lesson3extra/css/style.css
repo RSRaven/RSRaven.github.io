@@ -1,0 +1,57 @@
+body{
+	background: black url(../img/background.jpg) center center no-repeat;
+}
+
+.wrapper{
+	margin: 0 auto;
+	width: 600px;
+	color: white;
+}
+
+/* HEADER */
+
+.header{
+	position: relative;
+	overflow: hidden;
+}
+
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.contacts{
+	float: right;
+	padding-top: 100px;
+	padding-bottom: 20px;
+}
+
+.contacts li:first-child{
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+/* CONTENT */
+
+.content{
+	text-align: center;
+}
+
+.country{
+	float: left;
+	padding: 20px;
+	width: 25%;
+}
+
+.country_photo{
+	display: block;
+	border: 3px double #000;
+}
+
+/* FOOTER */
+
+.footer{
+	text-align: center;
+}
+
