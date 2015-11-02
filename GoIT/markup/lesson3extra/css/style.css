@@ -1,11 +1,13 @@
 body{
-	background: black url(../img/background.jpg) center center no-repeat;
+	background: #282828 url(../img/background.jpg) center 0 no-repeat;
+	font-family: Tahoma, sans-serif;
 }
 
 .wrapper{
 	margin: 0 auto;
-	width: 600px;
-	color: white;
+	width: 960px;
+	color: #e6e6e6;
+	padding-top: 53px;
 }
 
 /* HEADER */
@@ -15,6 +17,12 @@ body{
 	overflow: hidden;
 }
 
+.logo{
+	padding-top: 4px;
+	padding-left: 70px;
+}
+
+
 .clearfix:after{
 	content: '';
 	display: block;
@@ -23,35 +31,53 @@ body{
 
 .contacts{
 	float: right;
-	padding-top: 100px;
-	padding-bottom: 20px;
+	padding: 99px 86px 0 0;
+	font-size: 8px;
 }
 
 .contacts li:first-child{
 	padding-bottom: 5px;
 	font-weight: bold;
+	font-size: 10px;
 }
 
 /* CONTENT */
 
 .content{
+	padding-left: 69px;
+	padding-right: 72px;
 	text-align: center;
+	font-size: 15px;
 }
 
 .country{
 	float: left;
-	padding: 20px;
-	width: 25%;
+	padding-bottom: 50px;
+	width: 265px;
+}
+
+.country:nth-child(2){
+	padding: 0 12px;
+}
+
+.country:nth-child(5){
+	padding: 0 12px;
 }
 
 .country_photo{
 	display: block;
-	border: 3px double #000;
+}
+
+.country a{
+	text-decoration: none;
+	color: #e6e6e6;
 }
 
 /* FOOTER */
 
 .footer{
+	padding-top: 137px;
 	text-align: center;
+	font-size: 10px;
 }
 
