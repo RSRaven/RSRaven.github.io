@@ -89,6 +89,7 @@ body{
 	background: -ms-linear-gradient(top, rgba(55,55,55,1) 0%, rgba(48,48,48,1) 100%);
 	background: linear-gradient(to bottom, rgba(55,55,55,1) 0%, rgba(48,48,48,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373737', endColorstr='#303030', GradientType=0 );
+	z-index: 1;
 }
 
 .main_menu li{
@@ -150,7 +151,7 @@ body{
 	-webkit-transform:scale(1.05);*/
 }
 
-.content_table{
+/*.content_table{
 	width: 100%;
 	overflow: hidden;
 	line-height: 24px;
@@ -194,6 +195,72 @@ body{
 	background: #edeef0;
 	padding-bottom: 20000px;
 	margin-bottom: -20000px;
+}*/
+
+.bg_right{
+	line-height: 24px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.bg_right p{
+	padding: 0 10px 10px 10px;
+}
+
+.bg_right p:first-child{
+	padding: 5px 10px 0 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.bg_left{
+	position: relative;
+	float: left;
+	width: 100%;
+	right: 579px;
+	border-right: 1px #c7cacf solid;
+	background: #edeef0;
+}
+
+.bg_center{
+	position: relative;
+	float: left;
+	width: 100%;
+	right: 209px;
+	border-right: 1px #c7cacf solid;
+	background: white;
+}
+
+.bg_right{
+	position: relative;
+	overflow: hidden;
+	/*float: left;*/
+	width: 100%;
+	background: #edeef0;
+}
+
+.column_1{
+	position: relative;
+	overflow: hidden;
+	float: left;
+	width: 210px;
+	left: 790px;
+}
+
+.column_2{
+	position: relative;
+	overflow: hidden;
+	float: left;
+	width: 580px;
+	left: 790px;
+}
+
+.column_3{
+	position: relative;
+	overflow: hidden;
+	float: left;
+	width: 210px;
+	left: 790px;
 }
 
 /* FOOTER */
