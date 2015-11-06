@@ -1,6 +1,18 @@
+@font-face {
+    font-family: 'helvetica_neue';
+    src: url('../fonts/helveticaneue-thin-webfont.eot');
+    src: url('../fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneue-thin-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneue-thin-webfont.woff') format('woff'),
+         url('../fonts/helveticaneue-thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body{
 	background-color: #282828;
-	font-family: Tahoma, sans-serif;
+	font-family: 'helvetica_neue', Tahoma, sans-serif;
 	font-size: 14px;
 }
 
@@ -8,18 +20,14 @@ body{
 	width: 1215px;
 	height: 1064px;
 	margin: 0 auto;
-	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,1);
-	-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,1);
-	box-shadow: 0px 3px 5px 0px rgba(0,0,0,1);
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
-/*.clearfix:after{
-	content: '';
-	display: block;
-	clear: both;
-}*/
 
 /* HEADER */
+
 
 .header{
 	position: relative;
@@ -28,12 +36,12 @@ body{
 	height: 36px;
 }
 
-.header li, img, p{
+.header li, .header img, .header p{
 	display: block;
 	float: right;
 }
 
-.header a, p{
+.header a, .header p{
 	line-height: 36px;
 }
 
@@ -73,6 +81,99 @@ body{
 
 /* CONTENT */
 
+
 .content{
+	position: relative;
+	width: 1215px;
+	height: 1028px;
 	background-image: url(../img/bg_content.jpg);
+}
+
+.form{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -330px;
+	margin-left: -280px;
+	width: 560px;
+	text-align: center;
+}
+
+.content h1{
+	font-size: 24px;
+}
+
+.content h1, form{
+	background-color: rgba(0,0,0,0.63);
+}
+
+.content h1{
+	margin-bottom: 2px;
+	line-height: 62px;
+	color: white;
+}
+
+.form{
+	color: #cccccc;
+}
+
+.facebook_btn{
+	padding: 36px 0 32px 0;
+}
+
+.ou_line{
+	background: url(../img/form_ou.png) no-repeat center;
+	text-transform: uppercase;
+	color: #999999;
+	margin-bottom: 30px;
+}
+
+.form .text_input{
+	margin: 0 auto 18px auto;
+	text-align: center;
+}
+
+.form .text_input input{
+	width: 240px;
+	background-color: #0f0f0f;
+	padding: 12px 18px;
+	border: 0;
+	border-bottom: 1px #484848 solid;
+}
+
+.form .text_input input:focus{
+	color: #fffbfb;
+	background: #1b5288;
+	border: 0;
+	border-bottom: 1px #1f5384 solid;
+	-webkit-box-shadow: 0px 0px 7px 2px rgba(47,123,197,1);
+	-moz-box-shadow: 0px 0px 7px 2px rgba(47,123,197,1);
+	box-shadow: 0px 0px 7px 2px rgba(47,123,197,1);
+}
+
+.checkbox{
+	margin-left: 143px;
+	text-align: left;
+}
+
+.form .checkbox input{
+	width: initial;
+	margin: 1px 6px 0 0;
+	vertical-align:top;
+}
+
+.form .send_btn input{
+	margin: 23px 0 22px 0;
+	padding: 0;
+	width: initial;
+}
+
+.form span{
+	display: block;
+	line-height: 15px;
+	font-size: 11px;
+}
+
+.form span:last-child{
+	padding-bottom: 20px;
 }
