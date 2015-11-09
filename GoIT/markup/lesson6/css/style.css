@@ -2,23 +2,54 @@ body{
 	background: #282828;
 }
 
+<<<<<<< HEAD
 /* HEADER */
 
 header img, p, form{
 	display: inline;
+=======
+.wrapper{
+	background: white;
+	padding: 0 44px;
+	width: 912px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* HEADER */
+
+header {
+	position: relative;
+	overflow: hidden;
+	/*margin-left: 2px;*/
+	padding-top: 17px;
+	margin-bottom: 10px;
+}
+
+header .tel, header p, header form{
+	float: left;
+}
+
+header .tel{
+	margin-top: 2px;
+>>>>>>> Продолжаю работу над ДЗ№6
 }
 
 header p{
-	width: 264px;
-	height: 17px;
+	/*width: 264px;*/
+	/*height: 17px;*/
+	margin-top: 3px;
 	color: #5e696d;
 	font-family: Arial;
 	font-size: 18px;
-	font-weight: 400;
-	line-height: 25px;
+	/*font-weight: 400;*/
+	line-height: 26px;
 }
 
 header .login_form{
+<<<<<<< HEAD
+=======
+	/*display: inline-block;*/
+>>>>>>> Продолжаю работу над ДЗ№6
 	width: 495px;
 	height: 26px;
 	background-color: #b1bcc0;
@@ -27,6 +58,7 @@ header .login_form{
 	box-shadow: 1.5px 2.6px 3px rgba(150, 150, 150, 0.75);
 }
 
+<<<<<<< HEAD
 header .login_form input{
 	width: 115px;
 	height: 18px;
@@ -37,6 +69,46 @@ header .login_form input{
 header .site_map{
 	position: relative;
 	overflow: hidden;
+=======
+header .login_form img{
+	margin-top: 5px;
+	margin-left: 3px;
+}
+
+header .login_form input, header .login_form a, .login_form span{
+	vertical-align: super;
+}
+
+header .login_form input{
+	width: 115px;
+	height: 16px;
+	background-color: white;
+	border: 1px solid #9ba1a3;
+	font-size: 11px;
+}
+
+header .login_form a, .login_form span{
+	color: white;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+header .login_form a:last-child{
+	font-size: 12px;
+	color: #bfbfbf;
+	text-decoration: underline;
+}
+
+header .site_map{
+	float: right;
+	margin-top: 2px;
+	display: inline-block;
+	width: 77px;
+	height: 19px;
+	/*background-color: white;*/
+	border: 1px solid #bdc4c7;
+	border-radius: 12px;
+>>>>>>> Продолжаю работу над ДЗ№6
 }
 
 header .site_map li{
@@ -44,7 +116,12 @@ header .site_map li{
 }
 
 header .site_map a{
+<<<<<<< HEAD
 	display: block;
+=======
+	margin-left: 8px;
+	display: inline-block;
+>>>>>>> Продолжаю работу над ДЗ№6
 	background-image: url(../img/site_map.png);
 	height: 10px;
 }
@@ -63,6 +140,7 @@ header .letter{
 	background-position: -28px 0;
 }
 
+<<<<<<< HEAD
 
 /* END OF HEADER */
 
@@ -75,8 +153,100 @@ nav{
 	width: 912px;
 	height: 34px;
 	background-color: white;
+=======
+/* END OF HEADER */
+
+.banner{
+	margin-left: 2px;
+	margin-bottom: 6px;
+}
+
+/* NAV */
+
+.main_menu{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 10px;
+	height: 34px;
+>>>>>>> Продолжаю работу над ДЗ№6
 	background-image: linear-gradient(to top, black 0%, #576068 100%);
 	border: 1px solid #0d1642;
 	border-radius: 5px;
 	box-shadow: 1.5px 2.6px 5px rgba(0, 0, 0, 0.75);
+<<<<<<< HEAD
+=======
+}
+
+.main_menu ul{
+	margin-left: 125px;
+}
+
+.main_menu li{
+	float: left;
+}
+
+.main_menu a{
+	display: block;
+	margin-top: 4px;
+	padding: 0 20px;
+	border-radius: 12px;
+	line-height: 24px;
+	color: #b1bcc0;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.main_menu a:hover{
+	background-image: linear-gradient(180deg, #206988 0%, #114165 59%, #0c3256 100%);
+	color: white;
+}
+
+.main_menu .basket{
+	display: table;
+	float: right;
+	margin-right: 13px;
+	line-height: 34px;
+}
+
+.main_menu .basket p{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.main_menu img{
+	padding-right: 6px;
+}
+
+.main_menu .basket p{
+	font-family: Arial;
+	font-size: 11px;
+	color: #929b9f;
+}
+
+.main_menu .basket .sum{
+	padding: 0 10px;
+}
+
+.main_menu .basket .number{
+	padding-top: 1px;
+	font-size: 12px;
+	color: #0d5a8f;
+}
+
+/* END OF NAV */
+
+/* LEFT SIDEBAR */
+
+.left_sidebar{
+	float: left;
+}
+
+.left_sidebar .left_menu{
+	
+>>>>>>> Продолжаю работу над ДЗ№6
 }
