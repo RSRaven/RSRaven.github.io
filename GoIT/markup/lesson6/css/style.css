@@ -2,18 +2,18 @@ body{
 	background: #282828;
 }
 
-<<<<<<< HEAD
-/* HEADER */
-
-header img, p, form{
-	display: inline;
-=======
 .wrapper{
 	background: white;
 	padding: 0 44px;
 	width: 912px;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
+/*.clearfix:after{
+	display: block;
+	content: '';
+	clear: both;
+}*/
 
 /* HEADER */
 
@@ -31,7 +31,6 @@ header .tel, header p, header form{
 
 header .tel{
 	margin-top: 2px;
->>>>>>> Продолжаю работу над ДЗ№6
 }
 
 header p{
@@ -46,30 +45,14 @@ header p{
 }
 
 header .login_form{
-<<<<<<< HEAD
-=======
-	/*display: inline-block;*/
->>>>>>> Продолжаю работу над ДЗ№6
 	width: 495px;
 	height: 26px;
-	background-color: #b1bcc0;
+	/*background-color: #b1bcc0;*/
 	background-image: linear-gradient(180deg, #206988 0%, #114165 59%, #0c3256 100%);
 	border-radius: 4px;
 	box-shadow: 1.5px 2.6px 3px rgba(150, 150, 150, 0.75);
 }
 
-<<<<<<< HEAD
-header .login_form input{
-	width: 115px;
-	height: 18px;
-	background-color: white;
-	border: 1px solid #9ba1a3;
-}
-
-header .site_map{
-	position: relative;
-	overflow: hidden;
-=======
 header .login_form img{
 	margin-top: 5px;
 	margin-left: 3px;
@@ -108,7 +91,6 @@ header .site_map{
 	/*background-color: white;*/
 	border: 1px solid #bdc4c7;
 	border-radius: 12px;
->>>>>>> Продолжаю работу над ДЗ№6
 }
 
 header .site_map li{
@@ -116,12 +98,8 @@ header .site_map li{
 }
 
 header .site_map a{
-<<<<<<< HEAD
-	display: block;
-=======
 	margin-left: 8px;
 	display: inline-block;
->>>>>>> Продолжаю работу над ДЗ№6
 	background-image: url(../img/site_map.png);
 	height: 10px;
 }
@@ -140,20 +118,6 @@ header .letter{
 	background-position: -28px 0;
 }
 
-<<<<<<< HEAD
-
-/* END OF HEADER */
-
-/*.banner{
-	width: 909px;
-	height: 237px;
-}*/
-
-nav{
-	width: 912px;
-	height: 34px;
-	background-color: white;
-=======
 /* END OF HEADER */
 
 .banner{
@@ -168,13 +132,10 @@ nav{
 	overflow: hidden;
 	margin-bottom: 10px;
 	height: 34px;
->>>>>>> Продолжаю работу над ДЗ№6
 	background-image: linear-gradient(to top, black 0%, #576068 100%);
 	border: 1px solid #0d1642;
 	border-radius: 5px;
 	box-shadow: 1.5px 2.6px 5px rgba(0, 0, 0, 0.75);
-<<<<<<< HEAD
-=======
 }
 
 .main_menu ul{
@@ -240,13 +201,93 @@ nav{
 
 /* END OF NAV */
 
+/* MAIN */
+
+main{
+	position: relative;
+	overflow: hidden;
+	margin-top: 12px;
+}
+
 /* LEFT SIDEBAR */
 
 .left_sidebar{
 	float: left;
+	margin-right: 8px;
 }
 
-.left_sidebar .left_menu{
-	
->>>>>>> Продолжаю работу над ДЗ№6
+.left_sidebar p{
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #114165;
+}
+
+.left_sidebar>p{
+	margin-bottom: 14px;
+	width: 183px;
+	line-height: 25px;
+	border: 1px solid #79878d;
+	border-radius: 13px;
+	box-shadow: 1.5px 2.6px 3px rgba(150, 150, 150, 0.75);
+	font-size: 13px;
+}
+
+.left_sidebar p img{
+	margin: -3px 2px 0 4px;
+	vertical-align: middle;
+}
+
+.left_sidebar .left_menu li{
+	line-height: 26px;
+}
+
+.left_sidebar .left_menu>li p{
+	width: 150px;
+	border: 1px solid #79878d;
+	border-radius: 14px;
+}
+
+/*.left_sidebar .left_menu>li p img{
+	margin: -3px 2px 0 4px;
+	vertical-align: middle;
+}*/
+
+.left_sidebar .inner_menu{
+	list-style: circle;
+	text-indent: -8px;
+}
+
+.left_sidebar .inner_menu li{
+	margin-left: 35px;
+}
+
+.left_sidebar a{
+	display: block;
+	text-decoration: none;
+	font-size: 13px;
+	color: #465961;
+}
+
+.left_sidebar a:hover{
+	text-decoration: underline;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: 700;
+	font-style: italic;
+	color: #0c3256;
+}
+
+/* SECTION GOODS*/
+
+.goods{
+	position: relative;
+	overflow: hidden;
+	width: 526px;
+	height: 627px;
+	background-image: linear-gradient(to top, rgba(35, 75, 93, 0.24) 0%, rgba(201, 207, 209, 0.24) 100%);
+	border-radius: 3px;
+}
+
+.goods figure{
+	display: inline-block;
 }
