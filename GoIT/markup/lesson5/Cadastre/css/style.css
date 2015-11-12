@@ -11,20 +11,12 @@
 }
 
 body{
-	background-color: #282828;
+	background: #282828 url(../img/bg_content.jpg) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
 	font-family: 'helvetica_neue', Tahoma, sans-serif;
 	font-size: 14px;
 }
-
-.wrapper{
-	width: 1215px;
-	height: 1064px;
-	margin: 0 auto;
-	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-}
-
 
 /* HEADER */
 
@@ -81,15 +73,7 @@ body{
 
 /* CONTENT */
 
-
 .content{
-	position: relative;
-	width: 1215px;
-	height: 1028px;
-	background-image: url(../img/bg_content.jpg);
-}
-
-.form{
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -113,7 +97,7 @@ body{
 	color: white;
 }
 
-.form{
+.content{
 	color: #cccccc;
 }
 
@@ -128,20 +112,20 @@ body{
 	margin-bottom: 30px;
 }
 
-.form .text_input{
+.content .text_input{
 	margin: 0 auto 18px auto;
 	text-align: center;
 }
 
-.form .text_input input{
+.content .text_input input{
 	width: 240px;
 	background-color: #0f0f0f;
 	padding: 12px 18px;
 	border: 0;
-	border-bottom: 1px #484848 solid;
+	box-shadow: 0px 1px 0px 0px #4b4b4b;
 }
 
-.form .text_input input:focus{
+.content .text_input input:focus{
 	color: #fffbfb;
 	background: #1b5288;
 	border: 0;
@@ -156,24 +140,24 @@ body{
 	text-align: left;
 }
 
-.form .checkbox input{
+.content .checkbox input{
 	width: initial;
 	margin: 1px 6px 0 0;
 	vertical-align:top;
 }
 
-.form .send_btn input{
+.content .send_btn input{
 	margin: 23px 0 22px 0;
 	padding: 0;
 	width: initial;
 }
 
-.form span{
+.content span{
 	display: block;
 	line-height: 15px;
 	font-size: 11px;
 }
 
-.form span:last-child{
+.content span:last-child{
 	padding-bottom: 20px;
 }
