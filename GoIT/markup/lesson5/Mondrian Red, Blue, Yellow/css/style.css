@@ -1,7 +1,7 @@
 table{
 	margin: 100px;
 	border-collapse: collapse;
-	width: 400px; 
+	/*width: 400px;*/ 
 	border: hidden;
 }
 tr{
