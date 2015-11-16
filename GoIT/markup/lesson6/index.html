@@ -130,11 +130,44 @@
 							</dd>
 						</dl>						
 					</fieldset>
-					<input type="submit" value="поиск...">
+					<input class="input_submit" type="submit" value="поиск...">
 				</form>
 				<form class="search_tires" action="#">
-					
-
+					<h2>поиск шин</h2>
+					<ul>
+						<li class="clearfix">
+							<p>Размер:</p>
+							<select class="tire_size" name="" id="tire_width">
+								<option selected value="145">145</option>
+								<option value="150">150</option>
+								<option value="160">160</option>
+							</select>
+							<p class="p_slash">/</p>
+							<select class="tire_size" name="" id="tire_series">
+								<option selected disabled></option>
+								<option value="45">45</option>
+								<option value="50">50</option>
+								<option value="55">55</option>
+							</select>
+						</li>
+						<li class="clearfix">
+							<p class="p_tire_radial">R</p>
+							<select class="tire_radial" name="" id="tire_radial">
+								<option selected value="12">12</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+							</select>
+						</li>
+						<li class="clearfix">
+							<p class="p_season">Сезон:</p>
+							<div class="season_box">
+								<label><input type="checkbox" name="" id="summer">лето</label>
+								<label><input type="checkbox" name="" id="winter">зима</label>
+								<label><input type="checkbox" name="" id="allseasons">всесез</label>
+							</div>
+						</li>
+					</ul>
+					<input class="input_submit" type="submit" value="поиск...">
 				</form>
 				<form class="search_rims" action="#">
 					
