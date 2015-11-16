@@ -10,6 +10,10 @@
 
 }
 
+html, body{
+    height: 100%;
+}
+
 body{
 	background: #282828 url(../img/bg_content.jpg) no-repeat;
 	-webkit-background-size: cover;
@@ -74,30 +78,35 @@ body{
 /* CONTENT */
 
 .content{
+    position: relative;
+	min-height: 100%;
+}
+
+.form{
+	margin-left: -280px;
+	margin-top: -330px;
+	width: 560px;
+	text-align: center;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-top: -330px;
-	margin-left: -280px;
-	width: 560px;
-	text-align: center;
 }
 
-.content h1{
+.form h1{
 	font-size: 24px;
 }
 
-.content h1, form{
+.form h1, form{
 	background-color: rgba(0,0,0,0.63);
 }
 
-.content h1{
+.form h1{
 	margin-bottom: 2px;
 	line-height: 62px;
 	color: white;
 }
 
-.content{
+.form{
 	color: #cccccc;
 }
 
@@ -112,12 +121,12 @@ body{
 	margin-bottom: 30px;
 }
 
-.content .text_input{
+.form .text_input{
 	margin: 0 auto 18px auto;
 	text-align: center;
 }
 
-.content .text_input input{
+.form .text_input input{
 	width: 240px;
 	background-color: #0f0f0f;
 	padding: 12px 18px;
@@ -125,7 +134,7 @@ body{
 	box-shadow: 0px 1px 0px 0px #4b4b4b;
 }
 
-.content .text_input input:focus{
+.form .text_input input:focus{
 	color: #fffbfb;
 	background: #1b5288;
 	border: 0;
@@ -140,24 +149,24 @@ body{
 	text-align: left;
 }
 
-.content .checkbox input{
+.form .checkbox input{
 	width: initial;
 	margin: 1px 6px 0 0;
 	vertical-align:top;
 }
 
-.content .send_btn input{
+.form .send_btn input{
 	margin: 23px 0 22px 0;
 	padding: 0;
 	width: initial;
 }
 
-.content span{
+.form span{
 	display: block;
 	line-height: 15px;
 	font-size: 11px;
 }
 
-.content span:last-child{
+.form span:last-child{
 	padding-bottom: 20px;
 }
