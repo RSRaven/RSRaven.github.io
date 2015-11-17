@@ -620,7 +620,7 @@ main{
 	margin: 12px 1px 13px 23px;
 	text-align: center;
 	text-decoration: none;
-	cursor: default;
+	/*cursor: default;*/
 }
 
 .goods a p{
