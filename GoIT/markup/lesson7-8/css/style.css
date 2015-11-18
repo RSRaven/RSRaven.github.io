@@ -1,5 +1,180 @@
-h4, p повторяются много
+/*h4, p повторяются много
 a существуют 4 варианта: 
 	menu__link, read more, с 2мя p, в заголовках 
 h1, h3 встречаются 1 раз
-h2 2 раза
+h2 2 раза*/
+
+
+@font-face {
+    font-family: 'LeagueGothic';
+    src: url('../fonts/leaguegothic-regular-webfont.eot');
+    src: url('../fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('../fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('../fonts/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: "OpenSansLight";
+    src: url("../fonts/OpenSansLight.eot");
+    src: url("../fonts/OpenSansLight.eot?#iefix")format("embedded-opentype"),
+		 url("../fonts/OpenSansLight.woff") format("woff"),
+		 url("../fonts/OpenSansLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "OpenSansExtraBold";
+    src: url("../fonts/OpenSansExtraBold.eot");
+    src: url("../fonts/OpenSansExtraBold.eot?#iefix")format("embedded-opentype"),
+		 url("../fonts/OpenSansExtraBold.woff") format("woff"),
+		 url("../fonts/OpenSansExtraBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+html, body{
+	height: 100%;
+}
+
+/* HEADER */
+
+.header{
+	height: 846px;
+	background: url(../img/header_bg.jpg) 100% 100% no-repeat;
+	background-size: cover;
+}
+
+.wrapper{
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+	max-width: 960px;
+}
+
+.heading2{
+	font-family: LeagueGothic;
+	font-size: 48px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.heading2--header{
+	float: left;
+	margin: 70px 0 170px 0;
+	color: white;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.heading2--header--er{
+	background: rgba(116,80,131,1);
+	background: -moz-linear-gradient(top, rgba(116,80,131,1) 0%, rgba(50,37,57,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(116,80,131,1)), color-stop(100%, rgba(50,37,57,1)));
+	background: -webkit-linear-gradient(top, rgba(116,80,131,1) 0%, rgba(50,37,57,1) 100%);
+	background: -o-linear-gradient(top, rgba(116,80,131,1) 0%, rgba(50,37,57,1) 100%);
+	background: -ms-linear-gradient(top, rgba(116,80,131,1) 0%, rgba(50,37,57,1) 100%);
+	background: linear-gradient(to bottom, rgba(116,80,131,1) 0%, rgba(50,37,57,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#745083', endColorstr='#322539', GradientType=0 );
+	 -webkit-background-clip: text;
+	color: transparent;
+}
+
+.menu{
+	float: right;
+}
+
+.menu--header{
+	margin: 76px 0 0 0;
+	font-size: 24px;
+}
+
+.menu__item{
+	display: inline-block;
+}
+
+.menu__link{
+	display: block;
+	color: white;
+	text-decoration: none;
+	text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4);
+	font-family: LeagueGothic;
+	text-transform: uppercase;
+}
+
+.menu__link--header{
+	padding: 0 5px 8px 7px;
+	margin: 0 0 0 0;
+}
+
+.menu__link--header:hover{
+	border-bottom: 3px solid #edbfff;
+}
+
+.slider{
+	position: relative;
+	clear: both;
+	height: 400px;
+	background: rgba(0,0,0,0.2);
+}
+
+.slider__arrow{
+	display: block;
+}
+
+.slider__arrow--left{
+	position: absolute;
+	top: 183px;
+	left: 16.666667%;
+
+	
+}
+
+.slider__arrow--right{
+	float: right;
+}
+
+
+.heading1{
+	color: #fefefe;
+	font-family: LeagueGothic;
+	font-size: 60px;
+	line-height: 36px;
+}
+
+.heading3{
+	color: #edbfff;
+	font-family: LeagueGothic;
+	font-size: 32px;
+	line-height: 36px;
+}
+
+.article{
+	float: left;
+}
+
+.article--slider{
+	width: 52.0833%;
+	max-width: 500px;
+	margin: 80px 0 0 0;
+}
+
+.article__text{
+	font-family: OpenSans;
+	font-weight: 300;
+}
+
+.article__text--slider{
+	color: white;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.slider__img{
+	float: right;
+	margin-top: -20px;
+	margin-right: 7.8125%;
+}
+/* END OF HEADER */

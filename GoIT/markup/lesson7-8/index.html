@@ -8,26 +8,31 @@
 </head>
 <body>
 <!-- HEADER - лого, меню, слайдер-->
-<header>
-
-	<h2><a href="#">Pingbuller></a></h2> <!-- задать стиль для h2 - 2 последние буквы другого цвета -->
-	<nav>
-		<ul class="menu">
-			<li class="menu__item"><a class="menu__link" href="#"></a></li>
-			<li class="menu__item"><a class="menu__link" href="#"></a></li>
-			<li class="menu__item"><a class="menu__link" href="#"></a></li>
-			<li class="menu__item"><a class="menu__link" href="#"></a></li>
-			<li class="menu__item"><a class="menu__link" href="#"></a></li>
-			<li class="menu__item"><a class="menu__link" href="#"></a></li>
-		</ul>
-	</nav>
-	<section> <!-- сюда поставим тёмный фон -->
-		<!-- слайдер -->
-		<h1></h1>
-		<h3></h3>
-		<p></p>
-		<img src="" alt="">
-		<!-- конец слайдера -->
+<header class="header">
+	<section class="wrapper">
+		<h1><a class="heading2 heading2--header" href="#">Pingbull<span class="heading2 heading2--header--er">er</span></a></h1>
+		<nav>
+			<ul class="menu menu--header">
+				<li class="menu__item"><a class="menu__link menu__link--header" href="#">home</a></li>
+				<li class="menu__item"><a class="menu__link menu__link--header" href="#">about</a></li>
+				<li class="menu__item"><a class="menu__link menu__link--header" href="#">blog</a></li>
+				<li class="menu__item"><a class="menu__link menu__link--header" href="#">products</a></li>
+				<li class="menu__item"><a class="menu__link menu__link--header" href="#">lorem ipsum</a></li>
+				<li class="menu__item"><a class="menu__link menu__link--header" href="#">dolor sit amet</a></li>
+			</ul>
+		</nav>
+	</section>
+	<section class="slider">
+			<a class="slider__arrow slider__arrow--left" href="#">left</a>
+			<a class="slider__arrow slider__arrow--right" href="#">right</a>
+		<div class="wrapper">
+			<div class="article article--slider">
+				<p class="heading1">lorem ipsum dolor</p>
+				<p class="heading3">it will make all of your dreams come true</p>
+				<p class="article__text">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id </p>
+			</div>
+			<img class="slider__img" src="img/iphone_vid.png" alt="">
+		</div>
 	</section>
 </header>
 <!-- END OF HEADER -->
@@ -36,17 +41,17 @@
 	<section> <!-- сюда поставим gradient -->
 		<!-- 3 same blocks with bg-icon, padding -->
 		<div>
-			<h4></h4>
+			<p></p>
 			<p></p>
 			<a href="#"></a>
 		</div>
 		<div>
-			<h4></h4>
+			<p></p>
 			<p></p>
 			<a href="#"></a>
 		</div>
 		<div>
-			<h4></h4>
+			<p></p>
 			<p></p>
 			<a href="#"></a>
 		</div>
@@ -55,13 +60,13 @@
 	<section> <!-- 3 довольно разных блока -->
 
 		<div> <!-- не забыть иконку в bg -->
-			<h4><a href="#"></a></h4>
+			<p><a href="#"></a></p>
 			<p></p>
 			<!-- точка - через bg или img-->
 		</div>
 
 		<div>
-			<h4></h4>
+			<p></p>
 			<a href="#">
 				<p></p>
 				<p></p>
@@ -84,7 +89,7 @@
 
 	<section>
 		<div>
-			<h2><a href="#"></a></h2>
+			<p class="heading2"><a href="#">Pingbull<span>er</span></a></p>
 			<p></p> <!-- копирайт совсем не похож на p -->
 			<p></p>
 		</div>
@@ -100,6 +105,8 @@
 	
 
 </main>
+<!-- END OF MAIN -->
+<!-- FOOTER -->
 <footer>
 	
 	<nav>
