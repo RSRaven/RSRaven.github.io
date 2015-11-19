@@ -1,10 +1,3 @@
-/*h4, p повторяются много
-a существуют 4 варианта: 
-	menu__link, read more, с 2мя p, в заголовках 
-h1, h3 встречаются 1 раз
-h2 2 раза*/
-
-
 @font-face {
     font-family: 'LeagueGothic';
     src: url('../fonts/leaguegothic-regular-webfont.eot');
@@ -17,21 +10,11 @@ h2 2 раза*/
 } 
 
 @font-face {
-    font-family: "OpenSansLight";
-    src: url("../fonts/OpenSansLight.eot");
-    src: url("../fonts/OpenSansLight.eot?#iefix")format("embedded-opentype"),
-		 url("../fonts/OpenSansLight.woff") format("woff"),
-		 url("../fonts/OpenSansLight.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "OpenSansExtraBold";
-    src: url("../fonts/OpenSansExtraBold.eot");
-    src: url("../fonts/OpenSansExtraBold.eot?#iefix")format("embedded-opentype"),
-		 url("../fonts/OpenSansExtraBold.woff") format("woff"),
-		 url("../fonts/OpenSansExtraBold.ttf") format("truetype");
+    font-family: "OpenSans";
+    src: url("../fonts/OpenSansRegular.eot");
+    src: url("../fonts/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
+		 url("../fonts/OpenSansRegular.woff") format("woff"),
+		 url("../fonts/OpenSansRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -153,6 +136,7 @@ html, body{
 	font-family: LeagueGothic;
 	font-size: 60px;
 	line-height: 36px;
+	margin-bottom: 10px;
 }
 
 .heading3{
@@ -160,15 +144,15 @@ html, body{
 	font-family: LeagueGothic;
 	font-size: 32px;
 	line-height: 36px;
+	text-transform: uppercase;
 }
 
-.article{
+.article_left{
 	float: left;
 }
 
 .article--slider{
-	width: 52.0833%;
-	max-width: 500px;
+	width: 49%;
 	margin: 80px 0 0 0;
 }
 
@@ -229,8 +213,169 @@ html, body{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#745083', endColorstr='#322539', GradientType=0 );
 }
 
-
-
-.menu__circles--article{
-
+.article_center{
+	float: none;
+	margin: 0 auto;
 }
+
+.article_right{
+	float: right;
+}
+
+.article--violet_block{
+	padding-top: 80px;
+	padding-left: 65px;
+	width: 22%;
+}
+
+.article_left--violet_block{
+	background: url(../img/icons.png) -396px -65px no-repeat;
+}
+
+.article_right--violet_block{
+	background: url(../img/icons.png)  -480px 75px no-repeat;
+}
+.article_center--violet_block{
+	background: url(../img/icons.png) -323px -190px no-repeat;
+}
+
+.heading4{
+	margin-bottom: 10px;
+	text-shadow: 0.5px 0.9px 0 #0f1518;
+	color: white;
+	font-family: LeagueGothic;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 24px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.article__text--violet_block{
+	overflow: hidden;
+	height: 113px;
+	color: white;
+	text-shadow: 0.5px 0.9px 0 #0f1518;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.article__link{
+	float: right;
+	margin-top: 24px;
+	text-shadow: 0.5px 0.9px 0 #0f1518;
+	color: white;
+	font-family: LeagueGothic;
+	font-size: 18px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+/* END OF VIOLET BLOCK */
+
+/* NEWS BLOCK */
+.news{
+	height: 485px;
+	background-color: #f9f9f9;
+}
+
+.article--news{
+	margin-top: 120px;
+}
+
+.article_left--news{
+	width: 42%;
+	padding-left: 65px;
+	margin-top: 100px;
+	padding-top: 20px;
+	background: url(../img/icons.png) 0 -495px no-repeat;
+}
+
+.article_right--news{
+	width: 46.875%;
+}
+
+.heading4--gray{
+	padding-right: 5px;
+	color: #454545;
+	text-shadow: 0.5px 0.9px 0 white;
+}
+
+.heading4--pink{
+	display: inline-block;
+	color: #edbfff;
+	text-shadow: 0.5px 0.9px 0 white;
+}
+
+.menu__news{
+	float: none;
+	width: 100%;
+	padding-top: 65px;
+	text-align: center;
+}
+
+.menu__circles--news{
+	width: 17px;
+	height: 17px;
+	background: url(../img/icons.png) -56px -20px no-repeat;
+}
+
+.menu__circles--news:hover{
+	-ms-background-position-x: -78px;
+	background-position-x: -78px;
+}
+
+.news__link{
+	display: block;
+	padding-left: 67px;
+	text-decoration: none;
+}
+
+.news__link--recent{
+	background: url(../img/icons.png) -215px -319px no-repeat;
+}
+
+.news__link--category{
+	background: url(../img/icons.png) -145px -379px no-repeat;
+}
+
+.news__link--blog{
+	background: url(../img/icons.png) -74px -437px no-repeat;
+}
+
+.article__text--news{
+	text-shadow: 0.5px 0.9px 0 white;
+	color: #454545;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.article__text--news--bold{
+	font-weight: 700;
+}
+
+.article__link--news{
+	margin-right: 5px;
+	text-shadow: 0.5px 0.9px 0 white;
+	color: #454545;
+	line-height: 24px;
+}
+
+/* END OF NEWS BLOCK */
+	
+/* IMAGES BLOCK */
+
+
+/* END OF IMAGES BLOCK */
+
+
+
+/* COMMENTS BLOCK */
+/* END OF COMMENTS BLOCK */
+
+
+
+/*доделать нижние бордеры для каждого блока!
+применить свойство box-sizing для паддингов!
+*/
