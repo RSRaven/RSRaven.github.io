@@ -710,27 +710,38 @@ main{
 }
 
 .right_sidebar form label{
-	margin-left: 24px;
-	display: block;
-	line-height: 25px;
+	display: block; /* Блочный элемент */
+	position: relative; /* Относительное позиционирование */
+	height: 20px;
+	padding-left: 21px; /* Высота рисунка */
 	font-size: 13px;
 	color: #465961;
+	margin-bottom: 6px;
 }
 
-.right_sidebar form label input{
-	margin: -1px 12px 0 0;
-	vertical-align: middle;
-	height: 11px;
-	width: 11px;
+.right_sidebar input[type="checkbox"] + span{
+	position: absolute; /* Абсолютное позиционирование */ top: 0;
+	background: url(../img/checkbox.jpg) no-repeat; /* Фоновый рисунок */
+	cursor: pointer;
+	width: 55px;
+	left: 0;
+	height: 100%; /* Курсор в виде руки */
+	padding-left: 29px;
+    padding-top: 4px;
+    margin-left: 21px;
+}
+
+.right_sidebar input[type="checkbox"]:checked + span{
+ background-position: 0 -22px;
 }
 
 .right_sidebar form label:nth-child(4){
-	margin-bottom: 7px;
+	margin-bottom: 11px;
 }
 
 .right_sidebar form>input{
-	margin-top: 15px;
-	margin-left: 25px;
+	margin-top: 11px;
+	margin-left: 26px;
 	width: 80px;
 	height: 26px;
 	background-image: linear-gradient(180deg, #206988 0%, #114165 59%, #0c3256 100%);
