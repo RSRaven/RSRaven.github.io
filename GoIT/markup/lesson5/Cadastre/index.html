@@ -8,30 +8,38 @@
 </head>
 <body>
 	<div class="header">
-		<div class="enter">
-			<span>Ola!</span>
-			<a href="#">Entrar</a>
-			<span>ou</span>
-			<a href="#">Cadastre-se</a>
+		<div class="wrapper">
+			<div class="enter">
+				<span>Ola!</span>
+				<a href="#">Entrar</a>
+				<span>ou</span>
+				<a href="#">Cadastre-se</a>
+			</div>
+			<p>Minhas Ofertas</p>
+			<img class="header_img" src="img/flag.png" alt="">
+			<img class="header_img2" src="img/vert_line.png" alt="">
+			<ul class="menu">
+				<li><a href="#">Ajuda</a></li>
+				<li><a href="#">Contato</a></li>
+				<li><a href="#">Forum</a></li>
+				<li><a href="#">Vender</a></li>
+				<li><a href="#">Meu YouBike</a></li>
+			</ul>
 		</div>
-		<p>Minhas Ofertas</p>
-		<img class="header_img" src="img/flag.png" alt="">
-		<img class="header_img2" src="img/vert_line.png" alt="">
-		<ul class="menu">
-			<li><a href="#">Ajuda</a></li>
-			<li><a href="#">Contato</a></li>
-			<li><a href="#">Forum</a></li>
-			<li><a href="#">Vender</a></li>
-			<li><a href="#">Meu YouBike</a></li>
-		</ul>
 	</div>
 	<div class="content">
 		<div class="form">
 			<h1>Cadastre-se</h1>
 			<form action="/">
+
+
+				<!-- <div class="facebook_btn"> --> <!-- to do -->
 				<div class="facebook_btn">
-					<a href="#"><img src="img/facebook.png" alt="Login with Facebook"></a>
+					<a href="#"><img src="img/facebook.png" alt=""><span>Log In</span>with<span>Facebook</span><span>></span></a>
 				</div>
+				<!-- </div> -->
+
+
 				<p class="ou_line">ou</p>
 				<div class="text_input">
 					<input type="text" name="first_name" id="" placeholder="First Name" maxlength=50 required>
@@ -51,9 +59,7 @@
 				<div class="checkbox">
 					<label><input type="checkbox" name="" id="delivery_conf">Send me Youbike updates and tips</label>
 				</div>
-				<div class="send_btn">
-					<input type="image" src="img/send.png" alt="Create my Account">
-				</div>
+				<input type="submit" value="Create my Account">
 				<span>By clicking the button above, you agree to the Terms of Service</span>
 				<span>View our Privacy Policy</span>
 			</form>
