@@ -447,6 +447,10 @@ html, body{
 	text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
 
+.article__link--news--768{
+	display: none;
+}
+
 /* END OF NEWS BLOCK */
 	
 /* IMAGES BLOCK */
