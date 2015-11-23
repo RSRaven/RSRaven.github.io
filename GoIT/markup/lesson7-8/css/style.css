@@ -94,6 +94,7 @@ html, body{
 	text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4);
 	font-family: LeagueGothic;
 	text-transform: uppercase;
+	border-bottom: 3px solid transparent;
 }
 
 .menu__link--header{
@@ -360,18 +361,20 @@ html, body{
 	width: 46.875%;
 }
 
+.article__head{
+	margin-bottom: 12px;
+}
+
 .heading4--gray{
 	padding-right: 5px;
 	color: #454545;
 	text-shadow: 0.5px 0.9px 0 white;
-	letter-spacing: 0.1px;;
+	letter-spacing: 0;;;;
 }
 
 .heading4--pink{
-	display: inline-block;
-	color: #edbfff;
 	text-shadow: 0.5px 0.9px 0 white;
-	margin-bottom: 12px;
+	color: #edbfff;;
 }
 
 .menu__news{
@@ -429,6 +432,7 @@ html, body{
 
 .article__text--news--bold{
 	font-weight: 700;
+	letter-spacing: -0.2px;
 }
 
 .article__link--news{
@@ -461,13 +465,13 @@ html, body{
 }
 
 .menu__item--images{
-	margin: 0 3.2%;
+	margin: 0 3.3%;
 	float: none;
 }
 
 
 .menu__link--images{
-	height: 65px;
+	height: 64px;
 }
 
 .menu__link--images--first{
@@ -606,8 +610,3 @@ html, body{
 }
 
 /* END OF FOOTER */
-
-
-/*доделать нижние бордеры для каждого блока!
-применить свойство box-sizing для паддингов!
-*/
