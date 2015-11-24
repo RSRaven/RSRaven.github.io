@@ -1,9 +1,12 @@
 @font-face {
     font-family: 'helvetica_neue';
     src: url('../fonts/helveticaneue-thin-webfont.eot');
-    src: url('../fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/helveticaneue-thin-webfont.woff2') format('woff2'),
-         url('../fonts/helveticaneue-thin-webfont.woff') format('woff'),
+    src: url('../fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('../fonts/helveticaneue-thin-webfont.woff2') format('woff2'),
+
+         url('../fonts/helveticaneue-thin-webfont.woff') format('woff'),
+
          url('../fonts/helveticaneue-thin-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -185,6 +188,7 @@ body{
 }
 
 .form .text_input input{
+	color: #fffbfb;
 	width: 240px;
 	background-color: #0f0f0f;
 	padding: 12px 18px;
