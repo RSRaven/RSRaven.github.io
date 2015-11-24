@@ -191,8 +191,8 @@ html, body{
 
 .slider__img{
 	float: right;
-	margin-top: -17px;
-	margin-right: 7.1%;;
+	margin-right: 7.1%;
+	margin-top: -17px;;
 }
 
 .menu__slider{
@@ -280,7 +280,6 @@ html, body{
 }
 
 .heading4{
-	margin-bottom: 10px;
 	text-shadow: 0.5px 0.9px 0 #0f1518;
 	color: white;
 	font-family: LeagueGothic;
@@ -292,6 +291,7 @@ html, body{
 	letter-spacing: -0.2px;
 	height: 24px;
 	overflow: hidden;
+	margin-bottom: 10px;
 }
 
 .article__text--violet_block{
@@ -447,7 +447,7 @@ html, body{
 	text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
 
-.article__link--news--768{
+.article__link--news--less768{
 	display: none;
 }
 
@@ -475,7 +475,7 @@ html, body{
 
 
 .menu__link--images{
-	height: 64px;
+	height: 63px;
 }
 
 .menu__link--images--first{
@@ -532,6 +532,14 @@ html, body{
 	height: 307px;
 	padding-top: 94px;
 	width: 29.3%;
+}
+
+.article__left--comments--less768{
+	display: none;
+}
+
+.article__center--comments--less768{
+	display: none;
 }
 
 .heading2--comments{

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -19,7 +20,7 @@
 				<li class="menu__item"><a class="menu__link menu__link--header" href="#">products</a></li>
 				<li class="menu__item"><a class="menu__link menu__link--header" href="#">blog</a></li>
 				<li class="menu__item"><a class="menu__link menu__link--header" href="#">about</a></li>
-				<li class="menu__item menu__item--last"><a class="menu__link menu__link--header" href="#">home</a></li>
+				<li class="menu__item menu__item--last"><a class="menu__link menu__link--header menu__link--current" href="#">home</a></li>
 			</ul>
 		</nav>
 	</section>
@@ -86,7 +87,7 @@
 				</ul>
 			</div>
 			<div class="article article__right article--news article__right--news">
-				<p class="heading4 heading4--gray">recent updates</p>
+				<p class="heading4 heading4--gray heading4--gray--less768">recent updates</p>
 				<a class="news__link news__link--recent" href="#">
 					<p class="article__text article__text--news article__text--news--bold">Nunc turpis neque feugiat eget</p>
 					<p class="article__text article__text--news article__text--news--line">Posted by Admin on March 13 2012 in Recent News</p>
@@ -100,7 +101,7 @@
 					<p class="article__text article__text--news article__text--news--line">Posted by Admin on March 13 2012 in Blog Updates</p>
 				</a>
 				<a class="article__link article__link--news" href="#">read more here</a>
-				<a class="article__link article__link--news article__link--news--768" href="#">more blog posts</a>
+				<a class="article__link article__link--news article__link--news--less768" href="#">more blog posts</a>
 			</div>
 		</div>
 	</section>
@@ -109,12 +110,12 @@
 	<section class="images">
 		<div class="wrapper">
 			<ul class="menu menu--images">
-				<li class="menu__item menu__item--images"><a class="menu__link menu__link--images menu__link--images--first" href="#"></a></li>
+				<li class="menu__item menu__item--images menu__item--images--first"><a class="menu__link menu__link--images menu__link--images--first" href="#"></a></li>
 				<li class="menu__item menu__item--images"><a class="menu__link menu__link--images menu__link--images--second" href="#"></a></li>
 				<li class="menu__item menu__item--images"><a class="menu__link menu__link--images menu__link--images--third" href="#"></a></li>
 				<li class="menu__item menu__item--images"><a class="menu__link menu__link--images menu__link--images--fourth" href="#"></a></li>
 				<li class="menu__item menu__item--images"><a class="menu__link menu__link--images menu__link--images--fifth" href="#"></a></li>
-				<li class="menu__item menu__item--images"><a class="menu__link menu__link--images menu__link--images--sixth" href="#"></a></li>
+				<li class="menu__item menu__item--images menu__item--images--sixth"><a class="menu__link menu__link--images menu__link--images--sixth" href="#"></a></li>
 			</ul>
 		</div>
 	</section>
@@ -122,16 +123,24 @@
 <!-- COMMENTS BLOCK -->
 	<section class="comments">
 		<div class="wrapper">
-			<div class="article article__left article--comments">
+			<div class="article article__left article--comments article__left--comments">
 				<a class="heading2 heading2--comments" href="#">Pigbull<span class="heading2 heading2--comments--er">er</span></a>
 				<p class="copyright_text">Copyright 2013, Pingbull AS</p>
 				<p class="article__text article__text--comments">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
 			</div>
-			<div class="article article__right article--comments">
+			<div class="article article__left article--comments article__left--comments--less768">
 				<a class="heading4 heading4--gray heading4--comments" href="#">news categories</a>
 				<p  class="article__text article__text--comments">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
 			</div>
-			<div class="article article__center article--comments">
+			<div class="article article__right article--comments article__right--comments">
+				<a class="heading4 heading4--gray heading4--comments" href="#">news categories</a>
+				<p  class="article__text article__text--comments">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+			</div>
+			<div class="article article__center article--comments article__center--comments--less768">
+				<a class="heading4 heading4--gray heading4--comments" href="#">news categories</a>
+				<p  class="article__text article__text--comments">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+			</div>
+			<div class="article article__center article--comments article__center--comments">
 				<a class="heading4 heading4--gray heading4--comments" href="#">recent comments</a>
 				<p  class="article__text article__text--comments">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
 			</div>
