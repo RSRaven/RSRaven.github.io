@@ -68,12 +68,6 @@ html, body{
 	font-size: 24px;
 }
 
-.menu__item{
-}
-
-.menu__item--last{
-}
-
 .menu__link{
 	display: block;
 	color: white;
@@ -82,9 +76,6 @@ html, body{
 	font-family: LeagueGothic;
 	text-transform: uppercase;
 	border-bottom: 3px solid transparent;
-}
-
-.menu__link--header{
 }
 
 .menu__link--header:hover{
@@ -103,7 +94,7 @@ html, body{
 
 .slider__arrow{
 	display: block;
-	margin-top: 15px;
+	margin-top: 5px;
 	width: 24px;
 	height: 35px;
 }
@@ -170,9 +161,10 @@ html, body{
 }
 
 .menu__slider{
-	margin-top: 80px;
-    width: 100%;
-    text-align: center;
+	margin-top: 68px;
+	margin-left: 2%;
+	width: 98%;
+	text-align: center
 }
 
 .menu__item--slider{
@@ -215,28 +207,16 @@ html, body{
 	border-bottom: 1px solid white;
 }
 
-.wrapper--violet_block{
-}
-
-.article__center{
-}
-
-.article__right{
-}
-
-.article--violet_block{
-}
-
 .article__left--violet_block{
-	background: url(../img/icons.png) -400px -80px no-repeat;
+	background: url(../img/icons.png) -377px -74px no-repeat;
 }
 
 .article__right--violet_block{
-	background: url(../img/icons.png)  -400px -80px no-repeat;
+	background: url(../img/icons.png)  -377px -84px no-repeat;
 }
 
 .article__center--violet_block{
-	background: url(../img/icons.png) -400px -80px no-repeat;
+	background: url(../img/icons.png) -377px -68px no-repeat;
 }
 
 .heading4{
@@ -248,7 +228,7 @@ html, body{
 	line-height: 24px;
 	text-transform: uppercase;
 	text-decoration: none;
-	letter-spacing: -0.2px;
+	letter-spacing: -0.1px;
 	height: 24px;
 	overflow: hidden;
 	margin-bottom: 10px;
@@ -266,8 +246,8 @@ html, body{
 
 .article__link{
 	float: right;
-	margin-top: 20px;
-	margin-right: 3px;
+	margin-top: 18px;
+	margin-right: 27px;
 	text-shadow: 0.5px 0.9px 0 #0f1518;
 	color: white;
 	font-family: LeagueGothic;
@@ -275,6 +255,7 @@ html, body{
 	font-weight: 400;
 	text-transform: uppercase;
 	text-decoration: none;
+	letter-spacing: -0.4px;
 }
 
 .article__link--left{
@@ -392,7 +373,9 @@ html, body{
 
 .article__link--news--less768{
 	display: block;
-	margin-top: 0;
+	margin-top: -2px;
+	margin-right: 6px;
+	letter-spacing: 0px;
 }
 
 /* END OF NEWS BLOCK */
