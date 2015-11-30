@@ -1045,9 +1045,6 @@
 	
 }
 
-.menu__link--footer{
-}
-
 .menu__link--footer:hover{
 	border-bottom: 3px solid #edbfff;
 }
