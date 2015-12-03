@@ -7,7 +7,7 @@ for (var i = 0; i < 5; i++) {
 
 		user = prompt('Введите ' + (i + 1) + ' имя:');
 
-		if ((user != 'null') && (user != '')) {
+		if ((user != null) && (user != '')) {
 
 			break;
 
