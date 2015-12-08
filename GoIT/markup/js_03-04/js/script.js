@@ -1,56 +1,74 @@
-// var element = document.createElement('div');
-// element.classList.add('box');
-// element.innerHTML = 'dynamically created element';
-// var body = document.querySelector('body');
-// body.appendChild(element);
+var body = document.querySelector('body');
 
+var programmingTest = {
+    createWrapper () {
+        var wrapper = document.createElement('div');
+        wrapper.classList.add('wrapper');
+        wrapper.style.margin = '0 auto';
+        wrapper.style.width = '800px';
+        document.body.appendChild(wrapper);
+    },
 
-var test = {
     createHeading () {
-        var element = document.createElement('h1');
-        element.innerHTML = 'Тест по программированию';
-        document.body.appendChild(element);
+        wrapper = body.querySelector('.wrapper');
+        var h3 = document.createElement('h3');
+        h3.innerHTML = 'Тест по программированию';
+        h3.classList.add('text-center');
+        wrapper.appendChild(h3);
     },
 
     createForm () {
-        var element = document.createElement('form');
-        element.style.width = '300px';
-        document.body.appendChild(element);
+        var form = document.createElement('form');
+        // form.style.width = '300px';
+        wrapper.appendChild(form);
     },
 
     createFormGroup () {
-        var element = document.createElement('ol');
+        var form = wrapper.querySelector('form');
+
         for (var i = 0; i < 3; i++) {
-            var li = document.createElement('li');
-            element.appendChild(li);
-            var li = element.querySelectorAll('li');
-            var text = document.createTextNode('Вопрос № ' + (i+1));
-            li[i].appendChild(text);
+            var ul = document.createElement('ul');
+            ul.classList.add('list-unstyled');
+            ul.style.marginLeft = '20px';
+
+            var h4 = document.createElement('h4');
+            
+            form.appendChild(h4);
+            h4 = form.querySelectorAll('h4');
+            h4[i].appendChild(document.createTextNode((i+1) + '. ' + 'Вопрос № ' + (i+1)));
+
+            for (var j = 0; j < 3; j++) {
+                var li = document.createElement('li');
+                ul.appendChild(li);
+
+                var input = document.createElement('input');
+                input.type = 'checkbox';
+                var label = document.createElement('label');
+                label.appendChild(input);
+                label.appendChild(document.createTextNode('Вариант ответа № ' + (j+1)));
+
+                li = ul.querySelectorAll('li');
+
+                li[j].appendChild(label);
+            }
+
+            form.appendChild(ul);
         }
+    },
 
-        var form = document.querySelector('form');
-        form.appendChild(element);
+    createButton () {
+        var form = wrapper.querySelector('form');
+        var button = document.createElement('button');
+        button.classList.add('btn', 'btn-primary');
+        button.style.margin = '0 auto';
+        button.style.display = 'block';
+        button.appendChild(document.createTextNode('Проверить мои результаты'));
+        form.appendChild(button);
     }
-}
+};
 
-
-test.createHeading();
-test.createForm();
-test.createFormGroup();
-
-
-// var ul = document.createElement('ul');
-// for(...) ul.appendChild(li);   // сначала вставить узлы
-// document.body.appendChild(ul); // затем в документ
-
-/*
-вставить h1
-вставиь форму и в неё
-    маркированный список 1,2,3
-        в него через for i=3 для li - for i=3 checkbox, label
-
-        for li 0<i<2
-            for 0<i<2
-                checkbox, label
-вставить кнопку
-*/
+programmingTest.createWrapper();
+programmingTest.createHeading();
+programmingTest.createForm();
+programmingTest.createFormGroup();
+programmingTest.createButton();
