@@ -28,8 +28,10 @@ var TimerHTML = {
         var StartBtn = document.createElement('a');
         StartBtn.innerHTML = 'Start';
         StartBtn.id = 'StartBtn';
-        StartBtn.classList.add('btn', 'btn-success');
+        StartBtn.classList.add('col-md-5', 'btn', 'btn-success');
         wrapper.appendChild(StartBtn);
+        StartBtn.addEventListener("click", timerStart);
+
     },
 
      createClearBtn () {
@@ -37,8 +39,9 @@ var TimerHTML = {
         var ClearBtn = document.createElement('a');
         ClearBtn.innerHTML = 'Clear';
         ClearBtn.id = 'ClearBtn';
-        ClearBtn.classList.add('btn', 'btn-danger', 'pull-right');
+        ClearBtn.classList.add('col-md-5', 'btn', 'btn-danger', 'pull-right');
         wrapper.appendChild(ClearBtn);
+        ClearBtn.addEventListener("click", timerClear);
     },
 };
 
@@ -46,11 +49,6 @@ TimerHTML.createWrapper();
 TimerHTML.createBoard();
 TimerHTML.createStartBtn();
 TimerHTML.createClearBtn();
-
-function Start() {
-    var StartBtn = document.getElementById('StartBtn');
-    StartBtn.addEventListener("click", timerStart);
-}
 
 function addZeros(n, needLength) {
   needLength = needLength || 2;
@@ -65,7 +63,8 @@ function timerStart() {
     this.classList.remove('btn-success');
     this.classList.add('btn-primary');
     this.innerHTML = 'Pause';
-
+    StartBtn.removeEventListener("click", timerStart);
+    StartBtn.addEventListener("click", timerPause);
     var board = document.getElementById('board');
 
     timerId = setInterval(function() {
@@ -73,7 +72,7 @@ function timerStart() {
 
         ms++;
 
-        if (ms === 10) {
+        if (ms === 1000) {
             sec++;
             ms = 0;
         }
@@ -88,14 +87,19 @@ function timerStart() {
             min = 0;
         }
 
-    }, 1000);
+    }, 1);
 }
 
-Start();
+function timerPause() {
+    var StartBtn = document.getElementById('StartBtn');
+    StartBtn.classList.remove('btn-primary');
+    StartBtn.classList.add('btn-success');
+    StartBtn.innerHTML = 'Continue';
 
-function Clear() {
-    var ClearBtn = document.getElementById('ClearBtn');
-    ClearBtn.addEventListener("click", timerClear);
+    StartBtn.removeEventListener("click", timerPause);
+    StartBtn.addEventListener("click", timerStart);
+
+    clearInterval(timerId);
 }
 
 function timerClear() {
@@ -104,7 +108,15 @@ function timerClear() {
     StartBtn.classList.add('btn-success');
     StartBtn.innerHTML = 'Start';
 
+    var board = document.getElementById('board');
+    board.innerHTML = '00 : 00 : 00 : 000';
+    ms = 0;
+    sec = 0;
+    min = 0;
+    h = 0;
+
+    StartBtn.removeEventListener("click", timerPause);
+    StartBtn.addEventListener("click", timerStart);
+
     clearInterval(timerId);
 }
-
-Clear();
