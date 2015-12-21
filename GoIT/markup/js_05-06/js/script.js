@@ -3,6 +3,8 @@ var ms = 0;
 var sec = 0;
 var min = 0;
 var h = 0;
+var delay = 0;
+var start = 0;
 
 var TimerHTML = {
     createWrapper () {
@@ -51,6 +53,7 @@ TimerHTML.createStartBtn();
 TimerHTML.createClearBtn();
 
 function addZeros(n, needLength) {
+
   needLength = needLength || 2;
   n = String(n);
   while (n.length < needLength) {
@@ -60,32 +63,29 @@ function addZeros(n, needLength) {
 }
 
 function timerStart() {
+
     this.classList.remove('btn-success');
     this.classList.add('btn-primary');
     this.innerHTML = 'Pause';
     StartBtn.removeEventListener("click", timerStart);
     StartBtn.addEventListener("click", timerPause);
+
     var board = document.getElementById('board');
 
+    if (delay) {
+        start = start + Date.now() - delay;
+    } else {
+        start = Date.now();
+    }
+
     timerId = setInterval(function() {
-        board.innerHTML = addZeros(h) + ' : ' + addZeros(min) + ' : ' + addZeros(sec) + ' : ' + addZeros(ms, 3);
 
-        ms++;
+        ms = Date.now() - start;
+        sec = ms / 1000 ^ 0;
+        min = sec / 60 ^ 0;
+        h = min / 60 ^ 0;
 
-        if (ms === 1000) {
-            sec++;
-            ms = 0;
-        }
-
-        if (sec === 60) {
-            min++;
-            sec = 0;
-        }
-
-        if (min === 60) {
-            h++;
-            min = 0;
-        }
+        board.innerHTML = addZeros(h % 60) + ' : ' + addZeros(min % 60) + ' : ' + addZeros(sec % 60) + ' : ' + addZeros(ms % 1000, 3);
 
     }, 1);
 }
@@ -98,6 +98,8 @@ function timerPause() {
 
     StartBtn.removeEventListener("click", timerPause);
     StartBtn.addEventListener("click", timerStart);
+
+    delay = Date.now();
 
     clearInterval(timerId);
 }
@@ -117,6 +119,8 @@ function timerClear() {
 
     StartBtn.removeEventListener("click", timerPause);
     StartBtn.addEventListener("click", timerStart);
+
+    delay = 0;
 
     clearInterval(timerId);
 }
