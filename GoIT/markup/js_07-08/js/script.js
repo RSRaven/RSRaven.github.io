@@ -1,3 +1,6 @@
+// CSS properties are in the script file, because I wanted to practice with
+// jquery syntax :)
+
 $(function () {
 
 $('body').css({
@@ -5,9 +8,11 @@ $('body').css({
   fontSize: '12px'
 });
 
+
 // creating tabbar
 
-var $wrapper = $( "<div class = \"wrapper\"></div>" );
+
+var $wrapper = $( '<div class = \"wrapper\"></div>' );
 
 $wrapper.css({
   margin: '50px auto',
@@ -16,7 +21,7 @@ $wrapper.css({
   border: '1px solid grey'
 });
 
-var $innerWrapper = $( "<div class = \"innerWrapper\"></div>" );
+var $innerWrapper = $( '<div class = \"innerWrapper\"></div>' );
 
 $innerWrapper.css({
   margin: '5px',
@@ -24,7 +29,7 @@ $innerWrapper.css({
   borderRadius: '5px'
 });
 
-var $tabHolder = $( "<ul class = \"tabHolder\"><li></li><li></li><li></li></ul>" );
+var $tabHolder = $( '<ul class = \"tabHolder\"><li></li><li></li><li></li></ul>' );
 
 $tabHolder.css({
   margin: '3px',
@@ -34,9 +39,9 @@ $tabHolder.css({
   borderRadius: '5px'
 });
 
-var $tabAnchor1 = $( "<a class = \"tabAnchor tabAnchor1\">Nunc tincidunt</a>" ),
-    $tabAnchor2 = $( "<a class = \"tabAnchor tabAnchor2\">Proin dolor</a>" ),
-    $tabAnchor3 = $( "<a class = \"tabAnchor tabAnchor3\">Aenean lacinia</a>" );
+var $tabAnchor1 = $( '<a class = \"tabAnchor tabAnchor1\">Nunc tincidunt</a>' ),
+    $tabAnchor2 = $( '<a class = \"tabAnchor tabAnchor2\">Proin dolor</a>' ),
+    $tabAnchor3 = $( '<a class = \"tabAnchor tabAnchor3\">Aenean lacinia</a>' );
 
 $('body').append($wrapper);
 $wrapper.append($innerWrapper);
@@ -164,8 +169,8 @@ $tabAnchor1.on( 'click', function() {
     mouseout: tabMouseOut
   });
 
-  $(this).off("mouseover");
-  $(this).off("mouseout");
+  $(this).off('mouseover');
+  $(this).off('mouseout');
 });
 
 $tabAnchor2.on( 'click', function() {
@@ -193,8 +198,8 @@ $tabAnchor2.on( 'click', function() {
     mouseout: tabMouseOut
   });
 
-  $(this).off("mouseover");
-  $(this).off("mouseout");
+  $(this).off('mouseover');
+  $(this).off('mouseout');
 });
 
 $tabAnchor3.on( 'click', function() {
@@ -222,12 +227,73 @@ $tabAnchor3.on( 'click', function() {
     mouseout: tabMouseOut
   });
 
-  $(this).off("mouseover");
-  $(this).off("mouseout");
+  $(this).off('mouseover');
+  $(this).off('mouseout');
 });
+
 
 // creating form
 
+
+var $formWrapper = $( '<div class = \"wrapper\"></div>' ),
+    $form = $('<form></form>'),
+    $field1 = $( '<div class = \"formField\"><label for = \"firstname\">Firstname</label><input type = \"text\" id = \"firstname\"></input></div>' ),
+    $field2 = $( '<div class = \"formField\"><label for = \"lastname\">Lastname</label><input type = \"text\" id = \"lastname\"></input></div>' ),
+    $field3 = $( '<div class = \"formField\"><label for = \"address\">Address</label><input type = \"text\" id = \"address\"></input></div>' ),
+    $button = $( '<a class = \"button\">Show help</a>' );
+
+var $tooltip1 = $( '<div class = "tooltip tooltip1">Please provide your firstname.</div>' );
+var $tooltip2 = $( '<div class = "tooltip tooltip2">Please provide also your lastname.</div>' );
+var $tooltip3 = $( '<div class = "tooltip tooltip3">Your home or work address.</div>' );
+
+$wrapper.after($formWrapper);
+$formWrapper.append($form);
+$form.append($field1);
+$form.append($field2);
+$form.append($field3);
+$form.after($button);
+
+$formWrapper.css({
+  margin: '50px auto',
+  width: '600px',
+  height: '350px',
+  border: '1px solid grey'
+});
+
+$('.formField').css({
+  margin: '10px',
+});
+
+$('.formField label').css({
+  display: 'inline-block',
+  width: '70px'
+});
+
+$tooltip.css({
+// sldjfsidfo ;idfh sohd;iofu ;siod
+});
+
+$button.css({
+  margin: '10px',
+  padding: '5px',
+  display: 'block',
+  width: '70px',
+  backgroundColor: '#eee',
+  border: '1px solid #aaa',
+  borderRadius: '5px',
+  textDecoration: 'none',
+  color: 'grey',
+  textAlign: 'center',
+  cursor: 'pointer'
+});
+
+var buttonOver = tabMouseOver,
+    buttonOut = tabMouseOut;
+
+$button.on({
+    mouseover: buttonOver,
+    mouseout: buttonOut
+});
 
 
 
