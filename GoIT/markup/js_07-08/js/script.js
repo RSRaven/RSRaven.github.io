@@ -237,9 +237,9 @@ $tabAnchor3.on( 'click', function() {
 
 var $formWrapper = $( '<div class = \"wrapper\"></div>' ),
     $form = $('<form></form>'),
-    $field1 = $( '<div class = \"formField\"><label for = \"firstname\">Firstname</label><input type = \"text\" id = \"firstname\"></input></div>' ),
-    $field2 = $( '<div class = \"formField\"><label for = \"lastname\">Lastname</label><input type = \"text\" id = \"lastname\"></input></div>' ),
-    $field3 = $( '<div class = \"formField\"><label for = \"address\">Address</label><input type = \"text\" id = \"address\"></input></div>' ),
+    $field1 = $( '<div class = \"formField formField1\"><label for = \"firstname\">Firstname</label><input type = \"text\" id = \"firstname\"></input></div>' ),
+    $field2 = $( '<div class = \"formField formField2\"><label for = \"lastname\">Lastname</label><input type = \"text\" id = \"lastname\"></input></div>' ),
+    $field3 = $( '<div class = \"formField formField3\"><label for = \"address\">Address</label><input type = \"text\" id = \"address\"></input></div>' ),
     $button = $( '<a class = \"button\">Show help</a>' );
 
 var $tooltip1 = $( '<div class = "tooltip tooltip1">Please provide your firstname.</div>' );
@@ -249,8 +249,11 @@ var $tooltip3 = $( '<div class = "tooltip tooltip3">Your home or work address.</
 $wrapper.after($formWrapper);
 $formWrapper.append($form);
 $form.append($field1);
+$form.append($tooltip1);
 $form.append($field2);
+$form.append($tooltip2);
 $form.append($field3);
+$form.append($tooltip3);
 $form.after($button);
 
 $formWrapper.css({
@@ -261,7 +264,9 @@ $formWrapper.css({
 });
 
 $('.formField').css({
-  margin: '10px',
+  padding: '10px',
+  display: 'block',
+  width: '250px'
 });
 
 $('.formField label').css({
@@ -269,8 +274,110 @@ $('.formField label').css({
   width: '70px'
 });
 
-$tooltip.css({
-// sldjfsidfo ;idfh sohd;iofu ;siod
+$('.tooltip').css({
+  padding: '10px',
+  width: '225px',
+  display: 'none',
+  border: '0px solid grey',
+  borderRadius: '4px',
+  boxShadow: '0px 0px 5px 1px rgba(0,0,0,0.7)'
+});
+
+var tooltipVisible = function () {
+  $('.formField').css({
+    display: 'inline-block'
+  });
+
+  $('.tooltip').css({
+    display: 'inline-block'
+  });
+};
+
+var tooltipHide = function () {
+  $('.formField').css({
+    display: 'block'
+  });
+
+  $('.tooltip').css({
+    display: 'none'
+  });
+};
+
+var tooltip1Visible = function () {
+  $('.formField1').css({
+    display: 'inline-block'
+  });
+
+  $('.tooltip1').css({
+    display: 'inline-block'
+  });
+};
+
+var tooltip1Hide = function () {
+  $('.formField1').css({
+    display: 'block'
+  });
+
+  $('.tooltip1').css({
+    display: 'none'
+  });
+};
+var tooltip2Visible = function () {
+  $('.formField2').css({
+    display: 'inline-block'
+  });
+
+  $('.tooltip2').css({
+    display: 'inline-block'
+  });
+};
+
+var tooltip2Hide = function () {
+  $('.formField2').css({
+    display: 'block'
+  });
+
+  $('.tooltip2').css({
+    display: 'none'
+  });
+};
+var tooltip3Visible = function () {
+  $('.formField3').css({
+    display: 'inline-block'
+  });
+
+  $('.tooltip3').css({
+    display: 'inline-block'
+  });
+};
+
+var tooltip3Hide = function () {
+  $('.formField3').css({
+    display: 'block'
+  });
+
+  $('.tooltip3').css({
+    display: 'none'
+  });
+};
+
+$('.formField1').on({
+    mouseover: tooltip1Visible,
+    mouseout: tooltip1Hide
+});
+
+$('.formField2').on({
+    mouseover: tooltip2Visible,
+    mouseout: tooltip2Hide
+});
+
+$('.formField3').on({
+    mouseover: tooltip3Visible,
+    mouseout: tooltip3Hide
+});
+
+$button.on({
+    click: tooltipVisible,
 });
 
 $button.css({
