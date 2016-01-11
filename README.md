@@ -1,2 +1,3 @@
 # RSRaven.github.io
-Student works of Junior Frontend-developer :)
+My projects.
+Including student works and my own static (HTML, CSS, JS) and dynamic (MEAN stack) projects. 
