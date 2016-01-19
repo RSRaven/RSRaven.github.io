@@ -48,6 +48,11 @@ h1{
     box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.6);
 }
 
+.login-wrapper p {
+    margin: 10px;
+    font-size: 14px;
+}
+
 .clearfix:after {
     display: block;
     content: '';
@@ -62,7 +67,7 @@ h1{
 
 .user-icon {
     margin: 10px;
-    width: 100px;
+    width: 150px;
 }
 
 .carousel-list {

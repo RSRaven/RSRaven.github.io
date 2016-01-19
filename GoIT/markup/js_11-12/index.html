@@ -5,43 +5,44 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.rcarousel.js"></script>
     <script src="js/tmpl.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
+    <script type="text/template" id="template">
     <div class="wrapper">
         <div class="user-info clearfix">
-            <a class="user-change" href="#">User 1</a>
-            <a class="user-change" href="#">User 2</a>
+            <a class="user-change user-change__1" href="#">User 1</a>
+            <a class="user-change user-change__2" href="#">User 2</a>
             <h1>Login Information</h1>
             <div class="login-wrapper">
-                <h2 class="user-name">name</h2>
-                <img class="user-icon" src="img/user01.jpg">
-                <p>user's position</p>
-                <p>description of user</p>
+                <h2 class="user-name"><%= data.userName %></h2>
+                <img class="user-icon" src="img/<%= data.userIcon %>">
+                <p><%= data.userPosition %></p>
+                <p><%= data.userDescription %></p>
                 <div class="contacts">
                     <p>My phone number:</p>
-                    <p>tel #</p>
+                    <p><%= data.userTel %></p>
                 </div>
              </div>
-
         </div>
         <h1>rcarousel jQuery plugin</h1>
         <div class="carousel-wrapper">
             <ul class="carousel-list">
-                <li class="carousel-element"><img src="img/image01.jpg"><p>Описание 1</p></li>
-                <li class="carousel-element"><img src="img/image02.jpg"><p>Описание 2</p></li>
-                <li class="carousel-element"><img src="img/image03.jpg"><p>Описание 3</p></li>
-                <li class="carousel-element"><img src="img/image04.jpg"><p>Описание 4</p></li>
-                <li class="carousel-element"><img src="img/image05.jpg"><p>Описание 5</p></li>
+                <li class="carousel-element"><img src="img/<%= data.mealPic1 %>"><p>Описание 1</p></li>
+                <li class="carousel-element"><img src="img/<%= data.mealPic2 %>"><p>Описание 2</p></li>
+                <li class="carousel-element"><img src="img/<%= data.mealPic3 %>"><p>Описание 3</p></li>
+                <li class="carousel-element"><img src="img/<%= data.mealPic4 %>"><p>Описание 4</p></li>
+                <li class="carousel-element"><img src="img/<%= data.mealPic5 %>"><p>Описание 5</p></li>
             </ul>
         </div>
         <div class="carousel-controls">
-            <a class="carousel-arrow-left" href="">Left</a>
-            <a class="carousel-arrow-right" href="">Right</a>
+            <a class="carousel-arrow-left" href="#">Left</a>
+            <a class="carousel-arrow-right" href="#">Right</a>
         </div>
     </div>
+    </script>
 </body>
 </html>
