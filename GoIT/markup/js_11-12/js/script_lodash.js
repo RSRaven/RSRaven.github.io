@@ -30,9 +30,13 @@ $(function(){
 
   i = 0;
 
-  var content = tmpl( html, {
+  var tmpl = _.template( html );
+  var content = tmpl({
     data: users[i]
   });
+
+console.log('tmpl= ', tmpl);
+console.log('content= ', content);
 
   var $body = $( 'body' );
   $body.append( content );
@@ -40,7 +44,8 @@ $(function(){
   $body.on( 'click', '.user-change__1', function(e){
     e.preventDefault();
     i = 0;
-    content = tmpl( html, {
+    tmpl = _.template( html );
+    content = tmpl({
       data: users[i]
     });
     $(' .wrapper ').remove();
@@ -52,7 +57,8 @@ $(function(){
   $body.on( 'click', '.user-change__2', function(e){
     e.preventDefault();
     i = 1;
-    content = tmpl( html, {
+    tmpl = _.template( html );
+    content = tmpl({
       data: users[i]
     });
     $(' .wrapper ').remove();
