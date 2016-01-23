@@ -53,6 +53,7 @@ $form.prepend( content );
 // test check section
 
 var $checkResults = $( '#check-results' );
+
 $checkResults.on( 'click', function(e) {
 
   e.preventDefault();
@@ -71,7 +72,7 @@ $checkResults.on( 'click', function(e) {
 
   } else {
 
-    modal = ('<div class="mymodal"><div class="mymodal-inner"><h1 class="text-center">You were wrong!</h1><a class="center-block btn btn-primary" id="exit">Exit</a></div></div>');
+    modal = ('<div class="mymodal" id="mm"><div class="mymodal-inner"><h1 class="text-center">You were wrong!</h1><a class="center-block btn btn-primary" id="exit">Exit</a></div></div>');
 
   }
 
@@ -85,11 +86,11 @@ $checkResults.on( 'click', function(e) {
 // first variant is to submit the form
 //  $form.submit();
 
-// second variant is to uncheck checboxes
+// second variant is to uncheck checboxes and remove modal
     $( 'input:checkbox' ).prop( 'checked', false );
-    $modal = $( '.mymodal' );
+    var $modal = $( '.mymodal' );
+    console.log('modal = ', $modal)
     $modal.remove();
-
 
   });
 
