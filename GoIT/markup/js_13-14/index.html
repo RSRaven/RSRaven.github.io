@@ -11,36 +11,20 @@
 </head>
 <body>
     <div class="col-md-6 col-md-offset-3">
-        <h2 class="text-center">Тест по программироваинию</h2>
-        <form class="form-horizontal">
-        scr
-            <h3>Вопрос №1</h3>
-            <div class="form-group">
-                <label class="center-block"><input type="checkbox" name="" id="">Вопрос №1</label>
-                <label class="center-block"><input type="checkbox" name="" id="">Вопрос №2</label>
-                <label class="center-block"><input type="checkbox" name="" id="">Вопрос №3</label>
-            </div>
-            <h3>Вопрос №2</h3>
-            <div class="form-group">
-                <label class="center-block"><input type="checkbox" name="" id="">Вопрос №1</label>
-                <label class="center-block"><input type="checkbox" name="" id="">Вопрос №2</label>
-                <label class="center-block"><input type="checkbox" name="" id="">Вопрос №3</label>
-            </div>
-            <h3>Вопрос №3</h3>
-            <div class="form-group">
-                <label class="center-block"><input type="checkbox" name="" id="">Вопрос №1</label>
-                <label class="center-block"><input type="checkbox" name="" id="">Вопрос №2</label>
-                <label class="center-block"><input type="checkbox" name="" id="">Вопрос №3</label>
-            </div>
-
-            <input type="submit" value="Check results!" class="center-block btn btn-primary">
+        <h2 class="text-center">Programming test</h2>
+        <form class="form-horizontal" id="test">
+            <script type="text/template" id="template">
+                <% for (var i = 0; i < data.length; i++) { %>
+                <h3><%= data[i].question %></h3>
+                <div class="form-group">
+                    <label class="center-block"><input type="checkbox" name="" id="q<%= i+1 %>a1"><%= data[i].answer1 %></label>
+                    <label class="center-block"><input type="checkbox" name="" id="q<%= i+1 %>a2"><%= data[i].answer2 %></label>
+                    <label class="center-block"><input type="checkbox" name="" id="q<%= i+1 %>a3"><%= data[i].answer3 %></label>
+                </div>
+                <% } %>
+            </script>
+            <a href="" class="center-block btn btn-primary" id="check-results">Check my results!</a>
         </form>
     </div>
-
-
-
-
-
-
 </body>
 </html>
