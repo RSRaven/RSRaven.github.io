@@ -7,35 +7,54 @@ $(function(){
 var test = [
   {
     title: 'What is HTML?',
-    answers: [
-      'Hypertext Markup Language',
-      'Objective Programming Language',
-      'How To Make Landingpage'
-    ],
-    right: 0,
-    points: 1
-  },
+    points: 1,
+      answers: [{
+      answer: 'Hypertext Markup Language',
+      right: true
+    },
+    {
+      answer: 'Objective Programming Language',
+      right: false
+    },
+    {
+      answer: 'How To Make Landingpage',
+      right: false
+    }
+  ]},
   {
     title: 'What is CSS?',
-    answers: [
-      'Censor Sold Solar System',
-      'Central Sugar Station',
-      'Cascading Style Sheets'
-    ],
-    right: 2,
-    points: 1
+    points: 1,
+    answers: [{
+      answer: 'Censor Sold Solar System',
+      right: false
+    },
+    {
+      answer: 'Central Sugar Station',
+      right: false
+    },
+    {
+      answer: 'Cascading Style Sheets',
+      right: true
+    }]
   },
   {
     title: 'What is JavaScript?',
-    answers: [
-      'Analog of Java with more functions',
-      'High-level interpreted programming language',
-      'Language of Javas in Star Wars'
-    ],
-    right: 1,
-    points: 1
-  },
+    points: 1,
+    answers: [{
+      answer: 'Analog of Java with more functions',
+      right: false
+    },
+    {
+      answer: 'High-level interpreted programming language',
+      right: true
+    },
+    {
+      answer: 'Language of Javas in Star Wars',
+      right: false
+    }]
+  }
 ];
+
 
 // sending object to local storage
 
@@ -64,52 +83,132 @@ $form.prepend( content );
 
 // test check section
 
-var $checkResults = $( '#check-results' );
+var i, j;
+var $inputs = $('input:checkbox');
+
+$inputs.on( 'click', function() {
+
+  $(this).parent().siblings().children().each(function(){
+
+    if ( $(this).attr('disabled') ) {
+
+      $(this).attr('disabled', false);
+
+    } else {
+
+      $(this).attr('disabled', true);
+    }
+  });
+});
+
+var checkResults = function(e) {
+
+  e.preventDefault();
+  var rightAnswers = [];
+
+  var getRightAnswers = function() {
+
+    for ( i = 0; i < actualTest.length; i++ ) {
+
+      var testAnswers = actualTest[i].answers;
+
+      for (j = 0; j < testAnswers.length; j++) {
+
+        var currentAnswer = actualTest[i].answers[j].right;
+        rightAnswers.push(currentAnswer);
+
+      }
+    }
+  };
+
+  var givenAnswers = [];
+
+  var getGivenAnswers = function() {
 
 
-var check = function() {
+    $inputs.each(function () {
 
-/*  var $correctAnswers = $('#q1a1, #q2a3, #q3a2');
-  var $answers = $('input:checkbox:checked');
+      if ( $(this).prop('checked') ) {
+
+        givenAnswers.push(true);
+
+      } else {
+
+        givenAnswers.push(false);
+
+      }
+    });
+  };
+
+  var answered = 0;
+
+  var check = function () {
+
+    for (var i = 0; i < rightAnswers.length; i++) {
+
+      if ( rightAnswers[i] === true ) {
+
+        if ( rightAnswers[i] === givenAnswers[i] ) {
+          answered++;
+        }
+
+      }
+    }
+  };
+
+  var questionsQuantity = 0;
+
+  var sumQuestions = function () {
+    for (var i = 0; i < actualTest.length; i++) {
+      questionsQuantity++;
+    }
+
+  };
+
+  var passed = 0;
+  var testOK= false;
+
+  var testPassed = function () {
+    passed = answered /questionsQuantity;
+    if ( passed > 0.65 ) {
+      testOK = true;
+    }
+  };
+
+  getRightAnswers();
+  console.log('rightAnswers= ', rightAnswers);
+
+  getGivenAnswers();
+  console.log('givenAnswers= ', givenAnswers);
+
+  check();
+  console.log('answered= ', answered);
+
+  sumQuestions();
+
+  testPassed();
+  console.log('passed= ', passed);
+
+  console.log('testOK= ', testOK);
+
+
+// building modal with test results
+
   var modal;
   var $body = $( 'body' );
 
-  if ( $answers.length == $correctAnswers.length &&
-       $answers.get(0) == $correctAnswers.get(0) &&
-       $answers.get(1) == $correctAnswers.get(1) &&
-       $answers.get(2) == $correctAnswers.get(2) ){
+  if ( testOK ){
 
-    modal = ('<div class="mymodal"><div class="mymodal-inner"><h1 class="text-center">All correct!</h1><a class="center-block btn btn-primary" id="exit">Exit</a></div></div>');
+    modal = ('<div class="mymodal"><div class="mymodal-inner"><h1 class="text-center">You passed the test!</h1><h1 class="text-center">Right is '+
+     answered +', from '+ questionsQuantity +'</h1><a class="center-block btn btn-primary" id="exit">Exit</a></div></div>');
 
   } else {
 
-    modal = ('<div class="mymodal" id="mm"><div class="mymodal-inner"><h1 class="text-center">You were wrong!</h1><a class="center-block btn btn-primary" id="exit">Exit</a></div></div>');
+    modal = ('<div class="mymodal"><div class="mymodal-inner"><h1 class="text-center">You didn\'t pass the test!</h1><h1 class="text-center">Right is '+
+     answered +', from '+ questionsQuantity +'</h1><a class="center-block btn btn-primary" id="exit">Exit</a></div></div>');
 
-  }*/
-var answers = {};
+  }
 
-
-var answer1 = $('.form-group').eq(0).find('input');
-console.log('answer1= ', answer1);
-
-var answered1 = answer1.each(function(i){
-this[i] = i;
-console.log('this[i]=' ,this[i]);
-});
-console.log('answered1= ', answered1);
-
-for ( var i = actualTest.length - 1; i >= 0; i-- ) {
-  answers[i] = actualTest[i].right;
-}
-console.log('answers= ', answers);
-for ( i = actualTest.length - 1; i >= 0; i-- ) {
-  
-}
-
-
-
-  var modal;
-  var $body = $( 'body' );
 
   $body.append(modal);
 
@@ -117,7 +216,7 @@ for ( i = actualTest.length - 1; i >= 0; i-- ) {
 
   var reset = function() {
 
-    $( 'input:checkbox' ).prop( 'checked', false );
+    $( 'input:checkbox' ).prop( 'checked', false ).prop( 'disabled', false );
     var $modal = $( '.mymodal' );
     $modal.remove();
 
@@ -126,11 +225,10 @@ for ( i = actualTest.length - 1; i >= 0; i-- ) {
 
   $exit.on( 'click', reset );
 
-  return false;
 };
 
-$checkResults.on( 'click', check );
-
+var $checkResults = $( '#check-results' );
+$checkResults.on( 'click', checkResults );
 
 });
 
