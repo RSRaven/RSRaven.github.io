@@ -15,11 +15,11 @@
         <form class="form-horizontal" id="test">
             <script type="text/template" id="template">
                 <% for (var i = 0; i < data.length; i++) { %>
-                <h3><%= data[i].question %></h3>
+                <h3><%= data[i].title %></h3>
                 <div class="form-group">
-                    <label class="center-block"><input type="checkbox" name="" id="q<%= i+1 %>a1"><%= data[i].answer1 %></label>
-                    <label class="center-block"><input type="checkbox" name="" id="q<%= i+1 %>a2"><%= data[i].answer2 %></label>
-                    <label class="center-block"><input type="checkbox" name="" id="q<%= i+1 %>a3"><%= data[i].answer3 %></label>
+                    <label class="center-block"><input type="checkbox" name="" id="q<%= i+1 %>a1"><%= data[i].answers[0] %></label>
+                    <label class="center-block"><input type="checkbox" name="" id="q<%= i+1 %>a2"><%= data[i].answers[1] %></label>
+                    <label class="center-block"><input type="checkbox" name="" id="q<%= i+1 %>a3"><%= data[i].answers[2] %></label>
                 </div>
                 <% } %>
             </script>

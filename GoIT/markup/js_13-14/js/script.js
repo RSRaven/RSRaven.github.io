@@ -4,26 +4,38 @@ $(function(){
 
 // test is our object
 
-var test = [{
-  question: 'What is HTML?',
-  answer1: 'Hypertext Markup Language',
-  answer2: 'Objective Programming Language',
-  answer3: 'How To Make Landingpage'
-},
-
-{
-  question: 'What is CSS?',
-  answer1: 'Censor Sold Solar System',
-  answer2: 'Central Sugar Station',
-  answer3: 'Cascading Style Sheets'
-},
-
-{
-  question: 'What is JavaScript?',
-  answer1: 'Analog of Java with more functions',
-  answer2: 'High-level interpreted programming language',
-  answer3: 'Language of Javas in Star Wars'
-}];
+var test = [
+  {
+    title: 'What is HTML?',
+    answers: [
+      'Hypertext Markup Language',
+      'Objective Programming Language',
+      'How To Make Landingpage'
+    ],
+    right: 0,
+    points: 1
+  },
+  {
+    title: 'What is CSS?',
+    answers: [
+      'Censor Sold Solar System',
+      'Central Sugar Station',
+      'Cascading Style Sheets'
+    ],
+    right: 2,
+    points: 1
+  },
+  {
+    title: 'What is JavaScript?',
+    answers: [
+      'Analog of Java with more functions',
+      'High-level interpreted programming language',
+      'Language of Javas in Star Wars'
+    ],
+    right: 1,
+    points: 1
+  },
+];
 
 // sending object to local storage
 
@@ -54,11 +66,10 @@ $form.prepend( content );
 
 var $checkResults = $( '#check-results' );
 
-$checkResults.on( 'click', function(e) {
 
-  e.preventDefault();
+var check = function() {
 
-  var $correctAnswers = $('#q1a1, #q2a3, #q3a2');
+/*  var $correctAnswers = $('#q1a1, #q2a3, #q3a2');
   var $answers = $('input:checkbox:checked');
   var modal;
   var $body = $( 'body' );
@@ -74,27 +85,52 @@ $checkResults.on( 'click', function(e) {
 
     modal = ('<div class="mymodal" id="mm"><div class="mymodal-inner"><h1 class="text-center">You were wrong!</h1><a class="center-block btn btn-primary" id="exit">Exit</a></div></div>');
 
-  }
+  }*/
+var answers = {};
+
+
+var answer1 = $('.form-group').eq(0).find('input');
+console.log('answer1= ', answer1);
+
+var answered1 = answer1.each(function(i){
+this[i] = i;
+console.log('this[i]=' ,this[i]);
+});
+console.log('answered1= ', answered1);
+
+for ( var i = actualTest.length - 1; i >= 0; i-- ) {
+  answers[i] = actualTest[i].right;
+}
+console.log('answers= ', answers);
+for ( i = actualTest.length - 1; i >= 0; i-- ) {
+  
+}
+
+
+
+  var modal;
+  var $body = $( 'body' );
 
   $body.append(modal);
 
   var $exit = $( '#exit' );
 
-  $exit.on( 'click', function(e) {
+  var reset = function() {
 
-    e.preventDefault();
-// first variant is to submit the form
-//  $form.submit();
-
-// second variant is to uncheck checboxes and remove modal
     $( 'input:checkbox' ).prop( 'checked', false );
     var $modal = $( '.mymodal' );
-    console.log('modal = ', $modal)
     $modal.remove();
 
-  });
+    return false;
+  };
 
-});
+  $exit.on( 'click', reset );
+
+  return false;
+};
+
+$checkResults.on( 'click', check );
+
 
 });
 
