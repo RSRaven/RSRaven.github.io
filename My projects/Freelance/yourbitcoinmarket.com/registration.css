@@ -1,0 +1,240 @@
+div#container
+{
+   width: 994px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #E6E6E6;
+   background-image: url(images/bodybg.png);
+   background-position: left top;
+   background-repeat: repeat-x;
+   color: #444444;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+#Layer1
+{
+   background-color: transparent;
+   background-image: url(images/contentbg.png);
+   background-repeat: repeat-x;
+   background-position: left top;
+}
+#Shape1
+{
+   border-width: 0;
+}
+#wb_Text18 
+{
+   background-color: transparent;
+   border: 0px #000000 none;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text18 div
+{
+   text-align: left;
+}
+#Image6
+{
+   border: 0px #000000 solid;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#Image7
+{
+   border: 0px #000000 solid;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#Line1
+{
+   color: #AABBBB;
+   background-color: #AABBBB;
+   border-width: 0;
+   margin: 0;
+   padding: 0;
+}
+#wb_TextMenu1
+{
+   background-color: transparent;
+   color :#696969;
+   font-family: Tahoma;
+   font-weight: bold;
+   font-size: 16px;
+}
+#wb_TextMenu1 span
+{
+   margin: 0 0px 0 14px;
+}
+#wb_TextMenu1 .active
+{
+   color: #2266A5;
+   font-weight: bold;
+   text-decoration: none;
+}
+#Line3
+{
+   color: #A0A0A0;
+   background-color: #A0A0A0;
+   border-width: 0;
+   margin: 0;
+   padding: 0;
+}
+#wb_Form1
+{
+   background-color: #FFFFFF;
+   background-image: url(images/Image00002.jpg);
+   background-repeat: repeat-x;
+   background-position: center center;
+   background-size: Содержит;
+   border: 0px #000000 solid;
+   -moz-box-shadow: 4px 4px 15px #2F4F4F;
+   -webkit-box-shadow: 4px 4px 15px #2F4F4F;
+   box-shadow: 4px 4px 15px #2F4F4F;
+}
+#Editbox1
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #F5F5F5;
+   color :#333333;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+   -moz-box-shadow: 3px 3px 5px #000000;
+   -webkit-box-shadow: 3px 3px 5px #000000;
+   box-shadow: 3px 3px 5px #000000;
+}
+#Editbox2
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #F5F5F5;
+   color :#333333;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+   -moz-box-shadow: 3px 3px 5px #000000;
+   -webkit-box-shadow: 3px 3px 5px #000000;
+   box-shadow: 3px 3px 5px #000000;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text2 div
+{
+   text-align: center;
+}
+#wb_Text5 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text5 div
+{
+   text-align: center;
+}
+#wb_Text6 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text6 div
+{
+   text-align: center;
+}
+#Button1
+{
+   border: 1px #000000 solid;
+   background-color: #FFB935;
+   color: #333333;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 15px;
+   -moz-box-shadow: 3px 3px 5px #000000;
+   -webkit-box-shadow: 3px 3px 5px #000000;
+   box-shadow: 3px 3px 5px #000000;
+}
+#Editbox3
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #F5F5F5;
+   color :#333333;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+   -moz-box-shadow: 3px 3px 5px #000000;
+   -webkit-box-shadow: 3px 3px 5px #000000;
+   box-shadow: 3px 3px 5px #000000;
+}
+#Line2
+{
+   color: #A0A0A0;
+   background-color: #A0A0A0;
+   border-width: 0;
+   margin: 0;
+   padding: 0;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   border: 0px #000000 none;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text3 div
+{
+   text-align: left;
+}
+#wb_Text4 
+{
+   background-color: transparent;
+   border: 0px #000000 none;
+   padding: 0;
+   margin: 0;
+   text-align: justify;
+}
+#wb_Text4 div
+{
+   text-align: justify;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   border: 0px #000000 none;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text1 div
+{
+   text-align: left;
+}

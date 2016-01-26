@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Getbitcoinage.com</title>
+<meta name="description" content="Getbitcoinage.com is an online Bitcoin market">
+<meta name="keywords" content="bitcoin market, buy bitcoin, bitcoin mining, bitcoin miner, where to buy bitcoin, how to get bitcoin, what is bitcoin, purchase bitcoin, bitcoin exchange, sell bitcoin, bitcoins news, bitcoin wallet, bitcoin miner, get bitcoin">
+<meta name="robots" content="index,follow,cache">
+<meta name="author" content="Getbitcoinage.com">
+<link href="getbitcoinage.com.css" rel="stylesheet">
+<link href="contactus.css" rel="stylesheet">
+<script>
+function ValidateForm1(theForm)
+{
+   var regexp;
+   regexp = /^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ \t\r\n\f]*$/;
+   if (!regexp.test(theForm.Editbox1.value))
+   {
+      alert("Please enter only letter and whitespace characters in the \"Name\" field.");
+      theForm.Editbox1.focus();
+      return false;
+   }
+   if (theForm.Editbox1.value == "")
+   {
+      alert("Please enter a value for the \"Name\" field.");
+      theForm.Editbox1.focus();
+      return false;
+   }
+   if (theForm.Editbox1.value.length < 1)
+   {
+      alert("Please enter at least 1 characters in the \"Name\" field.");
+      theForm.Editbox1.focus();
+      return false;
+   }
+   regexp = /^([0-9a-z]([-.\w]*[0-9a-z])*@(([0-9a-z])+([-\w]*[0-9a-z])*\.)+[a-z]{2,6})$/i;
+   if (!regexp.test(theForm.Editbox2.value))
+   {
+      alert("Please enter a valid email address.");
+      theForm.Editbox2.focus();
+      return false;
+   }
+   if (theForm.Editbox2.value == "")
+   {
+      alert("Please enter a value for the \"E-mail\" field.");
+      theForm.Editbox2.focus();
+      return false;
+   }
+   if (theForm.Editbox2.value.length < 5)
+   {
+      alert("Please enter at least 5 characters in the \"E-mail\" field.");
+      theForm.Editbox2.focus();
+      return false;
+   }
+   regexp = /^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ \t\r\n\f0-9-]*$/;
+   if (!regexp.test(theForm.TextArea1.value))
+   {
+      alert("Please enter only letter, digit, whitespace and \"\" characters in the \"TextArea1\" field.");
+      theForm.TextArea1.focus();
+      return false;
+   }
+   if (theForm.TextArea1.value == "")
+   {
+      alert("Please enter a value for the \"TextArea1\" field.");
+      theForm.TextArea1.focus();
+      return false;
+   }
+   if (theForm.TextArea1.value.length < 1)
+   {
+      alert("Please enter at least 1 characters in the \"TextArea1\" field.");
+      theForm.TextArea1.focus();
+      return false;
+   }
+   return true;
+}
+</script>
+</head>
+<body>
+<div id="container">
+<div id="wb_Form1" style="position:absolute;left:303px;top:385px;width:395px;height:279px;z-index:10;">
+<form name="Form1" method="post" action="" enctype="text/plain" id="Form1" onsubmit="if(!ValidateForm1(this)) return false;alert('Thank you for your choise!');window.reload(true);return false;">
+<input type="text" id="Editbox1" style="position:absolute;left:42px;top:31px;width:308px;height:19px;line-height:19px;z-index:2;" name="Name" value="">
+<input type="text" id="Editbox2" style="position:absolute;left:42px;top:83px;width:308px;height:19px;line-height:19px;z-index:3;" name="E-mail" value="">
+<textarea name="TextArea1" id="TextArea1" style="position:absolute;left:42px;top:134px;width:308px;height:98px;z-index:4;" rows="5" cols="48"></textarea>
+<input type="submit" id="Button1" name="" value="Contact Us" style="position:absolute;left:130px;top:244px;width:135px;height:25px;z-index:5;">
+<div id="wb_Text2" style="position:absolute;left:42px;top:5px;width:310px;height:22px;text-align:center;z-index:6;">
+<span style="color:#333333;font-family:'Trebuchet MS';font-size:16px;">Name</span></div>
+<div id="wb_Text5" style="position:absolute;left:42px;top:57px;width:310px;height:22px;text-align:center;z-index:7;">
+<span style="color:#333333;font-family:'Trebuchet MS';font-size:16px;">E-Mail</span></div>
+<div id="wb_Text6" style="position:absolute;left:42px;top:108px;width:310px;height:22px;text-align:center;z-index:8;">
+<span style="color:#333333;font-family:'Trebuchet MS';font-size:16px;">Questions</span></div>
+</form>
+</div>
+<div id="wb_Text3" style="position:absolute;left:345px;top:236px;width:343px;height:75px;text-align:center;z-index:11;">
+<span style="color:#8B4513;font-family:'Lucida Sans Unicode';font-size:21px;">If you have any questions we will be happy to answer them. We thank you for feedback.</span></div>
+<div id="wb_Text1" style="position:absolute;left:0px;top:135px;width:1000px;height:45px;text-align:center;z-index:12;">
+<span style="color:#8B4513;font-family:'Lucida Sans Unicode';font-size:37px;"><strong><em>Getbitcoinage.com is an online Bitcoin market</em></strong></span></div>
+</div>
+<div id="PageHeader1" style="position:fixed;overflow:hidden;text-align:center;left:0;top:0;right:0;height:100px;z-index:7777;">
+<div id="PageHeader1_Container" style="width:1000px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<img src="images/img0004.png" alt="" style="border-width:0;position:absolute;left:19px;top:14px;width:200px;height:72px;z-index:0">
+<div id="wb_CssMenu1" style="position:absolute;left:19px;top:64px;width:951px;height:36px;text-align:right;z-index:1;">
+<ul>
+<li class="firstmain"><a href="./index.html" target="_self" title="Home">Home</a>
+</li>
+<li><a href="./howdobitcoinswork.html" target="_self" title="How Do Bitcoins Work">How&nbsp;Do&nbsp;Bitcoins&nbsp;Work</a>
+</li>
+<li><a href="./howtobuy.html" target="_self" title="How To Buy">How&nbsp;To&nbsp;Buy</a>
+</li>
+<li><a href="./contactus.html" target="_self" title="Contact Us">Contact&nbsp;Us</a>
+</li>
+<li><a href="./register.html" target="_self" title="Register">Register</a>
+</li>
+</ul>
+<br>
+</div>
+</div>
+</div>
+<div id="PageFooter1" style="position:absolute;overflow:hidden;text-align:center;left:0px;top:820px;width:100%;height:100px;z-index:13;">
+<div id="PageFooter1_Container" style="width:1000px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_Text4" style="position:absolute;left:0px;top:63px;width:1000px;height:16px;text-align:center;z-index:9;">
+<span style="color:#FFD700;font-family:'Lucida Sans Unicode';font-size:13px;">Copyright © 2015 · All Rights reserved</span></div>
+</div>
+</div>
+</body>
+</html>
