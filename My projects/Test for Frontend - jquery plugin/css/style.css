@@ -28,7 +28,11 @@
     clear: both;
 } */
 
-#geo-selector p{
+#regions {
+    margin: 5px;
+}
+
+#cities{
     float: right;
     margin: 5px;
     width: calc(60% - 10px);

@@ -4,71 +4,102 @@
         var defaults = {
             region: undefined
         };
-
+// добавлю аякс по региону позже. нужно будет получить список всех и после сравнения с дефолтом отобразить нужный
+// там будет if !undenined
         var settings = $.extend(defaults, options);
 
-        var $html = $('<p id="cities"></p><div class="geo-inner"><input type="text" name="" id="regionSearch"><div id="regions"></div></div>');
-        var $geoSelector =$('#geo-selector');
-        $geoSelector.append($html);
+        function init (region) {
+
+            var $html = $('<p id="cities"></p><div class="geo-inner"><input type="text" name="" id="regionSearch"><div id="regions"></div></div>');
+            var $geoSelector =$('#geo-selector');
+            $geoSelector.append($html);
+
+            if (region) {
+
+                settings = {
+
+                    url: "http://evildevel.com/Test/City?region=",
+
+                    success: function(data){
+
+                        $cities.html('');
+                        for (var i = data.length - 1; i >= 0; i--) {
+                            $cities.prepend(data[i][1] + ', ');
+                        }
+                    }
+
+                };
+
+                settings.url += region;
+
+                $.ajax(settings);
+            }
+
+        }
+
+        init(settings.region);
 
         var $regionSearch = $('#regionSearch');
+        var $regions = $('#regions');
+        var $cities = $('#cities');
 
-        $regionSearch.on('input', function() {
+        var showRegions = function() { // отображаем регионы
+
             var regionText = this.value;
-            console.log(regionText);
-/*
-        var settings = {
-            async: true,
-            crossDomain: true,
-            url: 'http://evildevel.com/Test/Region?name=',
-            method: 'GET',
-            dataType : "json",
-            headers: {
-                'cache-control': 'no-cache'
+
+            if (regionText !== '') {
+
+                var settings = {
+
+                    url: "http://evildevel.com/Test/Region?name=",
+
+                    success: function(data){
+
+                        $regions.html('');
+                        $cities.html('');
+                        for (var i = data.length - 1; i >= 0; i--) {
+                            $regions.prepend('<p><a href="#" data="' + data[i][0] + '">' + data[i][1] + '</a></p>');
+                        }
+                    }
+                };
+
+                var encRegion = encodeURIComponent('%' + regionText + '%');
+                settings.url += encRegion;
+
+                $.ajax(settings);
+
+            } else {
+
+                $regions.html('');
+                $cities.html('');
             }
         };
 
-        var encRegion = encodeURIComponent('%' + regionText + '%');
-        settings.url += encRegion;
-        
-        var ajaxSettings = JSON.stringify(settings);
+        $regionSearch.on('input', showRegions);
 
-        console.log('ajaxSettings= ', ajaxSettings);
-        
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-        });
-*/
+        var showCities = function (e) { // отображаем города
+            e.preventDefault();
+            region = e.target.getAttribute('data');
 
-        
-var settings = {
-    url: "http://evildevel.com/Test/Region?name=",
-    success: function(data){
-    alert( "Прибыли данные: " + data );
-  }
-};
+            var settings = {
 
-var encRegion = encodeURIComponent('%' + regionText + '%');
-settings.url += encRegion;
+                url: "http://evildevel.com/Test/City?region=",
 
-$.ajax({
-  url: "http://evildevel.com/Test/Region",
-  success: function(data){
-    alert( "Прибыли данные: " + data );
-  }
-});
+                success: function(data){
 
+                    $cities.html('');
+                    for (var i = data.length - 1; i >= 0; i--) {
+                        $cities.prepend(data[i][1] + ', ');
+                    }
+                }
+            };
 
+            settings.url += region;
 
+            $.ajax(settings);
+        };
 
-
-        });
-
-
-
-
-
-
+        $regions.on('click', showCities);
 
 
 
