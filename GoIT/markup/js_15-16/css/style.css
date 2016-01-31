@@ -63,7 +63,11 @@ a:visited {
     color: #660099;
 }
 
-p {
+.visibleURL {
+    color: #006621;
+}
+
+.content {
     color: #545454;
 }
 

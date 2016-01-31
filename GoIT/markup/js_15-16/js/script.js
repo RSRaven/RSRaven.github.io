@@ -28,11 +28,11 @@ var $ajaxQuery = function(i){
             for (i = 0; i < 8; i++) {
                 p.innerHTML += '<a href="http://more... :)" class="search-more">' + (i+1) + '</a>';
             }
-
+console.log(data.results);
             $.each(data.results, function(i, val) {
 
                 var li = document.createElement('li');
-                li.innerHTML = ('<h3><a href="' + val.url + '">' + val.title + '</a></h3><p>' + val.content + '</p>');
+                li.innerHTML = ('<h3><a href="' + val.url + '">' + val.title + '</a></h3><p class="visibleURL">' + val.visibleUrl + '</p><p class="content">' + val.content + '</p>');
                 ul.appendChild(li);
             });
 
