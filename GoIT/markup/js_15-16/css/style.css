@@ -80,6 +80,11 @@ a:visited {
     margin: 10px;
 }
 
-.search-more {
+.more-results-list a {
     padding: 0 6px;
+}
+
+.active {
+    color: red;
+    text-decoration: underline;
 }
