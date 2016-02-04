@@ -1,11 +1,10 @@
 (function($) {
-    
+
     $.fn.geoSelector = function(options) {
         var defaults = {
             region: undefined
         };
-// добавлю аякс по региону позже. нужно будет получить список всех и после сравнения с дефолтом отобразить нужный
-// там будет if !undenined
+
         var settings = $.extend(defaults, options);
 
         function init (region) {
@@ -27,14 +26,12 @@
                             $cities.prepend(data[i][1] + ', ');
                         }
                     }
-
                 };
 
                 settings.url += region;
 
                 $.ajax(settings);
             }
-
         }
 
         init(settings.region);
@@ -100,17 +97,6 @@
         };
 
         $regions.on('click', showCities);
-
-
-
-
-
-
-
-
-
-
-
 
         return this;
     };
