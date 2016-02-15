@@ -4,8 +4,8 @@ var $searcher = $('.searcher');
 
 var $ajaxQuery = function(k){
 
-    var $text = $('#query-search');
-    var url = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&rsz=8&start=' + k*8 + '&q='+ encodeURIComponent($text.val()) + '&callback=GoogleCallback&context=?';
+    var $text = $('#query-search').val();
+    var url = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&rsz=8&start=' + k*8 + '&q='+ $text + '&callback=GoogleCallback&context=?';
     var $wrapper = $('.wrapper');
     $('.results').remove();
 
