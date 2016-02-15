@@ -1,3 +1,2 @@
 # RSRaven.github.io
-My projects.
-Including student works and my own static (HTML, CSS, JS) and dynamic (MEAN stack) projects. 
+Student works at GoIT Frontend Online #2 course. 
