@@ -1,0 +1,22 @@
+{
+  "name": "js_19-20",
+  "description": "Homework",
+  "main": "app.js",
+  "authors": [
+    "Nikita Lovygin"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/RSRaven/RSRaven.github.io",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  }
+}
