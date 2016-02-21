@@ -1,0 +1,60 @@
+.header-upper {
+  // margin-bottom: 38px;
+  // height: 110px;
+  // line-height: 36px;
+  padding: 37px 0;
+  overflow: hidden;
+}
+
+.logo {
+  float: left;
+  line-height: 100%;
+}
+
+.logo__img {
+
+}
+
+
+
+.socials {
+  float: right;
+  line-height: 100%;
+}
+
+.socials__item {
+  display: inline-block;
+  text-decoration: none;
+  width: 33px;
+  color: #cccccc;
+
+  &::before {
+    @include fa;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: #248cec;
+  }
+}
+
+.facebook:before {
+  @include fa(facebook);
+}
+
+.twitter:before {
+  @include fa(twitter);
+}
+
+.rss:before {
+  @include fa(rss);
+}
+
+.linkedin:before {
+  @include fa(linkedin);
+}
+
+.skype:before {
+  @include fa(skype);
+}
+

@@ -16,7 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "normalize.css": "*",
-    "jquery": "2.*"
+    "jquery": "2.*",
+    "fa-scss-plus": "^1.0.0",
+    "reset-css": "^2.0.2011012603",
+    "lodash": "^4.5.0"
   }
 }

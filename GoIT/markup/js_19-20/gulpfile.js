@@ -12,8 +12,7 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
-    reload = browserSync.reload,
-    rename = require("gulp-rename");
+    reload = browserSync.reload
 
 var path = {
     build: { //Тут мы укажем куда складывать готовые после сборки файлы
@@ -37,12 +36,12 @@ var path = {
         img: 'client_src/img/**/*.*',
         fonts: 'client_src/fonts/**/*.*'
     },
-    clean: './build'
+    clean: 'build'
 };
 
 var config = {
     server: {
-        baseDir: "./build"
+        baseDir: "build"
     },
     tunnel: true,
     host: 'localhost',
@@ -51,14 +50,14 @@ var config = {
 };
 
 
-gulp.task('html:build', function () {
+gulp.task('build:html', function () {
     gulp.src(path.src.html) //Выберем файлы по нужному пути
         .pipe(rigger()) //Прогоним через rigger
         .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
         .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
 
-gulp.task('js:build', function () {
+gulp.task('build:js', function () {
     gulp.src(path.src.js) //Найдем наш main файл
         .pipe(rigger()) //Прогоним через rigger
         .pipe(sourcemaps.init()) //Инициализируем sourcemap
@@ -68,7 +67,7 @@ gulp.task('js:build', function () {
         .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 
-gulp.task('style:build', function () {
+gulp.task('build:style', function () {
     gulp.src(path.src.style) //Выберем наш main.scss
         .pipe(rigger()) //Прогоним через rigger - пришлось переименовать normalize.css -> normalize.scss
         .pipe(sourcemaps.init()) //То же самое что и с js
@@ -80,7 +79,7 @@ gulp.task('style:build', function () {
         .pipe(reload({stream: true}));
 });
 
-gulp.task('image:build', function () {
+gulp.task('build:image', function () {
     gulp.src(path.src.img) //Выберем наши картинки
         .pipe(imagemin({ //Сожмем их
             progressive: true,
@@ -92,45 +91,34 @@ gulp.task('image:build', function () {
         .pipe(reload({stream: true}));
 });
 
-gulp.task('fonts:build', function() {
+gulp.task('build:fonts', function() {
     gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts));
 });
 
-gulp.task('change', function() {
-    gulp.src("client_src/libs/normalize.css/normalize.css")
-        .pipe(rename(function (path) {
-            path.dirname = "";
-            path.basename = "normalize";
-            path.extname = ".scss";
-        }))
-        .pipe(gulp.dest("client_src/libs/normalize.css/"));
-});
-
 gulp.task('build', [
-    'change',
-    'html:build',
-    'js:build',
-    'style:build',
-    'image:build',
-    'fonts:build'
+    'build:html',
+    'build:js',
+    'build:style',
+    'build:image',
+    'build:fonts'
 ]);
 
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
-        gulp.start('html:build');
+        gulp.start('build:html');
     });
     watch([path.watch.style], function(event, cb) {
-        gulp.start('style:build');
+        gulp.start('build:style');
     });
     watch([path.watch.js], function(event, cb) {
-        gulp.start('js:build');
+        gulp.start('build:js');
     });
     watch([path.watch.img], function(event, cb) {
-        gulp.start('image:build');
+        gulp.start('build:image');
     });
     watch([path.watch.fonts], function(event, cb) {
-        gulp.start('fonts:build');
+        gulp.start('build:fonts');
     });
 });
 

@@ -2,10 +2,14 @@
  * Third party
  */
 
- @import "../libs/normalize.css/normalize.scss";
+/*= ../libs/reset-css/_reset.scss */
+/*= ../libs/fa-scss-plus/_fontawesome.scss */
 
 /*
  * Custom
  */
 
-@import "partials/app.scss";
+/*= variables.scss */
+/*= partials/header.scss */
+/*= partials/app.scss */
+/*= partials/footer.scss */
