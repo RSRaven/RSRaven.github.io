@@ -1,0 +1,28 @@
+// main
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1160px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+// colors
+
+
+// fonts
+
+
+//mixins
+
+@mixin menu-item {
+  display: inline-block;
+}
