@@ -17,12 +17,21 @@ a {
 
 // colors
 
+$logo-header-color: #434343;
+$logo-paragraph-color: #333333;
+$white: #ffffff;
+$very-light-gray: #cccccc;
+$light-gray: #8a8a8a;
+$gray: #35383c;
+$dark-gray: #2a2d32;
+$almost-black: #181a1d;
+$yellow: #f4b60d;
+$blue: #248cec;
 
 // fonts
 
 
+
+
 //mixins
 
-@mixin menu-item {
-  display: inline-block;
-}

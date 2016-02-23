@@ -43,7 +43,7 @@ var config = {
     server: {
         baseDir: "build"
     },
-    tunnel: true,
+    tunnel: false,
     host: 'localhost',
     port: 3000,
     logPrefix: "Frontend_Project"

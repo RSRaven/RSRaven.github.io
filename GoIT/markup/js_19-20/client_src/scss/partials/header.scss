@@ -1,6 +1,4 @@
 .header-upper {
-  // margin-bottom: 38px;
-  // height: 110px;
   line-height: 37px;
   padding: 37px 0;
   overflow: hidden;
@@ -14,11 +12,11 @@
 }
 
 .logo__header {
-
+  color: $logo-header-color;
 }
 
 .logo__text {
-
+  color: $logo-paragraph-color;
 }
 
 .menu-socials {
@@ -27,9 +25,9 @@
 }
 
 .menu-socials__item {
-  @include menu-item;
+  display: inline-block;
   width: 33px;
-  color: #cccccc;
+  color: $very-light-gray;
 
   &::before {
     @include fa;
@@ -37,7 +35,7 @@
 
   &:hover {
     cursor: pointer;
-    color: #248cec;
+    color: $blue;
   }
 }
 
@@ -62,21 +60,47 @@
 }
 
 .menu-main__item {
-  @include menu-item;
-  line-height: 56px;
-  padding: 0 40px;
+  display: inline-block;
+  border-right: 1px solid $almost-black;
 
   &:last-child {
     float: right;
     padding: 0;
+    border: 0;
+  }
+
+  &--active {
+    background-color: $blue;
+    border: 0;
+  }
+}
+
+.menu-main {
+  background-color: $dark-gray;
+}
+
+.menu-main__link {
+  display: block;
+  padding: 0 40px;
+  line-height: 56px;
+  color: $white;
+
+  &:visited {
+    color: $white;
+  }
+
+  &:hover {
+    color: $yellow;
   }
 }
 
 .menu-main__search {
-  margin: 6px;
+  margin: 8px;
   padding: 0 12px;
-  line-height: 44px;
-  border: 1px solid black;
+  line-height: 40px;
+  border: 1px solid $almost-black;
+  background-color: $gray;
+  color: $white;
 
   &:after {
     @include fa;
@@ -86,6 +110,11 @@
 
   & input {
     border: 0;
+    background-color: $gray;
+  
+    &:focus {
+      outline: none;
+    }
   }
 }
 

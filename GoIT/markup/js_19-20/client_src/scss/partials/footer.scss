@@ -1,0 +1,79 @@
+.menu-footer {
+  background-color: $dark-gray;
+}
+
+.menu-bottom-wrapper {
+  display: inline-block;
+  width: 260px;
+  margin-right: 36px;
+  margin-bottom: 83px;
+
+  &:last-child {
+      margin-right: 0;
+  }
+}
+
+.menu-bottom-header {
+  margin-top: 63px;
+  margin-bottom: 37px;
+  color: $white;
+}
+
+.footer-contacts {
+  background-color: $gray;
+}
+
+.menu-bottom__item {
+  line-height: 36px;
+  border-bottom: 1px solid #393c40;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.menu-bottom__link {
+  color: $white;
+
+  &:visited {
+    color: $white;
+  }
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.footer-contacts {
+  line-height: 60px;
+}
+
+.footer-contacts__item {
+  color: $white;
+
+  &::before {
+    @include fa;
+    @include fa-right(20px);
+    @include fa-align(baseline);
+  } 
+}
+
+.footer-contacts__item--address::before {
+  @include fa(map-marker);
+}
+
+.footer-contacts__item--phone {
+  margin: 0 41px 0 33px;
+
+  &::before {
+    @include fa(mobile);
+  }
+}
+
+.footer-contacts__item--email::before {
+  @include fa(credit-card);
+}
+
+.footer-contacts__item--title {
+  float: right;
+}
