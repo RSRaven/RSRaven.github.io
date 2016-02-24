@@ -2,14 +2,14 @@
  * Third party
  */
 
-/*=../libs/reset-css/_reset.scss */
-/*=../libs/fa-scss-plus/_fontawesome.scss */
+@import "../libs/reset-css/_reset";
+@import "../libs/fa-scss-plus/_fontawesome";
 
 /*
  * Custom
  */
 
-/*= variables.scss */
-/*= partials/header.scss */
-/*= partials/app.scss */
-/*= partials/footer.scss */
+@import "variables";
+@import "partials/header";
+@import "partials/content";
+@import "partials/footer";

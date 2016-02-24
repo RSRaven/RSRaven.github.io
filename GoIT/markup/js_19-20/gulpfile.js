@@ -69,7 +69,7 @@ gulp.task('build:js', function () {
 
 gulp.task('build:style', function () {
     gulp.src(path.src.style) //Выберем наш main.scss
-        .pipe(rigger()) //Прогоним через rigger - пришлось переименовать normalize.css -> normalize.scss
+        // .pipe(rigger()) //Прогоним через rigger
         .pipe(sourcemaps.init()) //То же самое что и с js
         .pipe(sass()) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы

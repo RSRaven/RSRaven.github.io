@@ -20,13 +20,17 @@ a {
 $logo-header-color: #434343;
 $logo-paragraph-color: #333333;
 $white: #ffffff;
+$almost-white: #e8e8e8;
 $very-light-gray: #cccccc;
 $light-gray: #8a8a8a;
 $gray: #35383c;
 $dark-gray: #2a2d32;
+$darkest-gray: #2a2b2e;
 $almost-black: #181a1d;
 $yellow: #f4b60d;
 $blue: #248cec;
+
+$news-description-color: #9d9d9d;
 
 // fonts
 
@@ -35,3 +39,13 @@ $blue: #248cec;
 
 //mixins
 
+@mixin clearfix {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+@mixin square($value: 100%) {
+    width: $value;
+    height: $value;
+}
