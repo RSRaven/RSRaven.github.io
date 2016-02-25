@@ -92,7 +92,7 @@ gulp.task('build:image', function () {
 });
 
 gulp.task('build:fonts', function() {
-    gulp.src(path.src.fonts)
+    gulp.src([path.src.fonts, 'client_src/libs/FlexSlider-Scss/fonts/*.*'])
         .pipe(gulp.dest(path.build.fonts));
 });
 

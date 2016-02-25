@@ -1,3 +1,5 @@
+// footer block
+
 .menu-footer {
   background-color: $dark-gray;
 }
@@ -17,6 +19,9 @@
   margin-top: 63px;
   margin-bottom: 37px;
   color: $white;
+  font-family: $ubuntu-m;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .footer-contacts {
@@ -34,6 +39,9 @@
 
 .menu-bottom__link {
   color: $white;
+  font-family: $arial;
+  font-size: 13px;
+  opacity: 0.3;
 
   &:visited {
     color: $white;
@@ -50,6 +58,9 @@
 
 .footer-contacts__item {
   color: $white;
+  font-family: $arial;
+  font-size: 12px;
+  opacity: 0.2;
 
   &::before {
     @include fa;
