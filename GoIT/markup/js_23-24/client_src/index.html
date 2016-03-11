@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MVC ToDo</title>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <h1 class="header__title">Header</h1>
+        </div>
+    </header>
+
+    <section class="list">
+        <div class="wrapper">
+            <h2 class="list__title">List Title</h2>
+            <ul id="list">
+            </ul>
+            <input type="text" class="list__input">
+            <button class="list__add-button">Save</button>
+        </div>
+    </section>
+
+    <script id="list-template" type="text/template">
+        <% for (i = 0; i < data.length: i++) { %>
+        <li class="list__elem">
+            <p class="list__text"><%= data[i] %><span class="list__remove-item">X</span></p>
+        </li>
+        <% };%>
+    </script>
+
+</body>
+</html>
