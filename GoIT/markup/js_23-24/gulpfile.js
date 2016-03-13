@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     requirejsOptimize = require('gulp-requirejs-optimize'),
-    uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
@@ -62,8 +61,18 @@ gulp.task('build:js', function () {
     return gulp.src(path.src.js)
         // .pipe(rigger())
         .pipe(sourcemaps.init())
-        .pipe(requirejsOptimize({include: ["requireLib"]}))
-        // .pipe(uglify())
+        .pipe(requirejsOptimize({
+            paths: {
+                'jquery': 'http://code.jquery.com/jquery-1.12.0.min',
+            },
+            shim: {
+                'jquery': {
+                    exports: 'jquery'
+                },
+            },
+            include: ['../../node_modules/requirejs/require.js', 'app.js'],
+            // optimize: "none"
+        }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
@@ -71,7 +80,6 @@ gulp.task('build:js', function () {
 
 gulp.task('build:style', function () {
     return gulp.src(path.src.style)
-        // .pipe(rigger())
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(prefixer())

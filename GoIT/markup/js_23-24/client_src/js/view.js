@@ -1,26 +1,26 @@
 define (
     'View',
-    [
-        'jquery',
-        'tmpl'
-    ],
-    function($, tmpl){
-        function View(model) {
+    [],
+    function(){
+        return function (model) {
             var self = this;
 
             self.elements = {
                 input: $('.list__input'),
                 addBtn: $('.list__add-button'),
-                listContainer: $('#list')
+                rmvItem: '.list__remove-item',
+                editItem: '.list__edit-item',
+                listContainer: $('#list'),
+                resetBtn: $('.list__reset-button')
             };
 
             self.renderList = function (data) {
-                var list = tmpl.tmpl( $("#list-template"), {data: data} );
+                var list = tmpl( $("#list-template").html(), {data: data} );
                 self.elements.listContainer.html(list);
             };
 
             self.renderList(model.data);
-        }
+        };
     }
 );
 

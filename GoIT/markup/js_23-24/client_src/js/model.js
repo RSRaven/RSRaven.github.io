@@ -2,10 +2,17 @@ define(
     'Model',
     [],
     function(){
-        function Model(data) {
+        return function (data) {
             var self = this;
-            self.data = data;
 
+            var localData = localStorage.getItem('data');
+
+            if(localData) {
+                self.data = JSON.parse(localData);
+            } else {
+                self.data = data;
+
+            }
             self.addItem = function (item) {
                 if (item.length === 0) {
                     return;
@@ -26,7 +33,28 @@ define(
 
                 return self.data;
             };
-        }
+
+            self.changeItem = function (item, changedItem) {
+                var index = self.data.indexOf(item);
+                self.data[index] = changedItem;
+
+                return self.data;
+            };
+
+            self.saveData = function (data) {
+                var localData = JSON.stringify(data);
+                localStorage.setItem('data', localData);
+            };
+
+            self.resetData = function () {
+                self.data = ['This ToDo list was resetted. Try it again!'];
+                var localData = JSON.stringify(self.data);
+                localStorage.setItem('data', localData);
+
+                console.log(self.data);
+                return self.data;
+            };
+        };
     }
 );
 

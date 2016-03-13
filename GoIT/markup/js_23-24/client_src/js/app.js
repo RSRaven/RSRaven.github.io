@@ -1,6 +1,6 @@
 requirejs.config({
     paths: {
-        'jquery': 'http//code.jquery.com/jquery-1.12.0.min.js',
+        'jquery': 'http://code.jquery.com/jquery-1.12.0.min',
     },
     shim: {
         'jquery': {
@@ -20,11 +20,11 @@ require(
     function (tmpl, $, Model, View, Controller) {
         $(function() {
 
-            var data = ['test 1', 'test 2', 'test 3'];
+            var data = ['This ToDo list can save your data. Try it!'];
 
             var model = new Model(data);
             var view = new View(model);
-            var controller = new Controller();
+            var controller = new Controller(model, view);
 
         });
     }
