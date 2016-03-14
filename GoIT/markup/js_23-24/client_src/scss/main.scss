@@ -36,8 +36,16 @@ body {
 }
 
 .list__text {
+  display: inline-block;
+  width: 90%;
   margin-bottom: 10px;
   border-bottom: 1px solid #dddddd;
+}
+
+.list__buttons {
+  width: 10%;
+  display: inline-block;
+  text-align: right;
 }
 
 .list__remove-item {

@@ -18,7 +18,7 @@
             <h2 class="list__title">My first ToDo list</h2>
             <ul id="list">
             </ul>
-            <textarea class="list__input" placeholder="Enter your note"></textarea>
+            <textarea class="list__input" placeholder="Enter your note" autofocus></textarea>
             <div class="button-wrapper">
                 <button class="list__add-button">Save</button>
                 <button class="list__reset-button">Reset All</button>
@@ -29,7 +29,7 @@
     <script id="list-template" type="text/template">
         <% for (var i = 0; i < data.length; i++) { %>
         <li class="list__elem">
-            <pre class="list__text"><%= data[i] %><span class="list__remove-item">x</span><span class="list__edit-item">Edit</span></pre>
+            <pre class="list__text"><%= data[i] %></pre><div class="list__buttons"><span class="list__remove-item">x</span><span class="list__edit-item">Edit</span></div>
         </li>
         <% };%>
     </script>

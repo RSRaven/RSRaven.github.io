@@ -12,7 +12,7 @@ define(
 
 
             function addItem() {
-                var newItem = view.elements.input.val();
+                var newItem = view.elements.input.val().replace(/\n+$/m, '').replace(/\s+$/, '');
                 model.addItem(newItem);
                 model.saveData(model.data);
                 view.renderList(model.data);
@@ -20,7 +20,8 @@ define(
             }
 
             function removeItem(e) {
-                var delItem = e.target.closest('.list__text').childNodes[0].data;
+                // var delItem = e.target.closest('.list__text').childNodes[0].data;
+                var delItem = $(e.target).parent('.list__buttons').siblings('.list__text').text();
                 model.removeItem(delItem);
                 model.saveData(model.data);
                 view.renderList(model.data);

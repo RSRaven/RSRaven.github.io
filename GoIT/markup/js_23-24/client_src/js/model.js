@@ -51,7 +51,6 @@ define(
                 var localData = JSON.stringify(self.data);
                 localStorage.setItem('data', localData);
 
-                console.log(self.data);
                 return self.data;
             };
         };
