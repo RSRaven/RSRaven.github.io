@@ -20,6 +20,7 @@ var gulp = require('gulp'),
     htmlhint = require('gulp-htmlhint'),
     jscs = require('gulp-jscs'),
     jshint = require('gulp-jshint'),
+    spritesmith = require('gulp.spritesmith'), // дописать
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
 
@@ -112,6 +113,10 @@ gulp.task('build:images', function () {
                .pipe(reload({stream: true}));
 });
 
+/*gulp.task('build:sprites', function () {
+    return // дописать, возможно придётся использовать run-sequence https://github.com/twolfson/gulp.spritesmith
+});
+*/
 gulp.task('build:fonts', function () {
     return gulp.src(path.src.fonts)
                .pipe(gulp.dest(path.build.fonts))
