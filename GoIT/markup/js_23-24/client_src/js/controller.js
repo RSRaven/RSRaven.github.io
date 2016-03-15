@@ -20,7 +20,6 @@ define(
             }
 
             function removeItem(e) {
-                // var delItem = e.target.closest('.list__text').childNodes[0].data;
                 var delItem = $(e.target).parent('.list__buttons').siblings('.list__text').text();
                 model.removeItem(delItem);
                 model.saveData(model.data);
@@ -28,7 +27,7 @@ define(
             }
 
             function editItem(e) {
-                var item = e.target.closest('.list__text').childNodes[0].data;
+                var item = $(e.target).parent('.list__buttons').siblings('.list__text').text();
                 view.elements.input.val(item);
                 view.elements.addBtn.text('Edit');
 
