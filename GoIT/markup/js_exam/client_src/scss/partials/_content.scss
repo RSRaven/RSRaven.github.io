@@ -1,3 +1,27 @@
+.how-it-works {
+    color: $main-text-color;
+}
+
+.section-heading {
+    margin: 40px 0 20px 0;
+    color: $additional-text-color;
+    text-align: center;
+    font-family: $montserrat-b;
+    font-size: 14px;
+}
+
+.tile {
+    border-radius: 4px;
+
+    &--how {
+        width: 300px;
+        height: 240px;
+        background: url(../img/how1.png) no-repeat, linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+    }
+}
+
+
+
 @media screen and (max-width:480px) {
     /* Селекторы */
 }

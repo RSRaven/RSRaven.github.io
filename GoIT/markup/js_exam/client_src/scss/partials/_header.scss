@@ -1,0 +1,50 @@
+.header {
+    background: url(../img/bg.jpg) center no-repeat;
+    text-align: center;
+    color: $main-text-color;
+
+    &__title {
+        padding-bottom: 40px;
+        font-family: $montserrat-b;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    &__slogan {
+        padding-bottom: 20px;
+        font-family: $montserrat-b;
+        text-transform: uppercase;
+        font-size: 30px;
+
+        &--add {
+            padding-bottom: 20px;
+            font-family: $roboto-l;
+            font-size: 18px;
+        }
+    }
+}
+
+.login {
+    padding: 20px 0 115px 0;
+
+    &__button {
+        @include button;
+        padding: 0 16px;
+        height: 36px;
+        line-height: 36px;
+
+
+        &--bordered {
+            border-color: #fff;
+        }
+    }
+}
+
+.button--header-main {
+    @include button;
+    margin-bottom: 138px;
+    width: 280px;
+    background-color: $auxiliary-color;
+    border-color: $auxiliary-color;
+}
+
