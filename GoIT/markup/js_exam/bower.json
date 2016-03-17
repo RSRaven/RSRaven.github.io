@@ -13,11 +13,11 @@
     "tests"
   ],
   "dependencies": {
-    "FlexSlider-Scss": "http://github.com/Studio-40/FlexSlider-Scss.git#^1.0.0",
     "jquery": "^1",
     "isotope": "^2.2.2",
     "imagesloaded": "^4.1.0",
     "lodash": "^4.5.0",
-    "reset-css": "^2.0.2011012603"
+    "reset-css": "^2.0.2011012603",
+    "jcarousel": "^0.3.4"
   }
 }

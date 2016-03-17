@@ -39,7 +39,7 @@ var path = {
         css: 'client_src/scss/styles.scss',
         img: 'client_src/img/**/*.*',
         fonts: 'client_src/fonts/**/*.*',
-        libs: 'client_src/libs/**/*.min.js'
+        libs: 'client_src/libs/**/*min.js'
     },
     style: {
         html: 'client_src/**/*.html',

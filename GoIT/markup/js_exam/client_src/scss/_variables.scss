@@ -1,3 +1,20 @@
+//mixins
+
+@mixin clearfix {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+@mixin button {
+    height: 40px;
+    line-height: 40px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    font-family: $montserrat-b;
+    font-size: 14px;
+}
+
 // main
 
 * {
@@ -5,26 +22,27 @@
 }
 
 .wrapper {
-  margin: 0 10px;
-  // width: 1160px;
-  min-width: 300px;
+    margin: 0 auto;
+    padding: 0 10px;
+    // width: 1160px;
+    min-width: 300px;
 
+    &::after {
+        @include clearfix;
+    }
 }
 
 // colors
 
 $main-text-color: #ffffff;
 $additional-text-color: #333333;
+$tile-text-color: #cccccc;
 $auxiliary-color: #ff4e50;
 
 a {
     display: inline-block;
     text-decoration: none;
     color: $main-text-color;
-
-    &:hover {
-        color: $main-text-color;
-    }
 }
 
 // fonts
@@ -197,20 +215,3 @@ $roboto-m-i: 'robotomedium_italic', sans-serif;
 $roboto-r: 'robotoregular', sans-serif;
 $roboto-t: 'robotothin', sans-serif;
 $roboto-t-i: 'robotothin_italic', sans-serif;
-
-//mixins
-
-@mixin clearfix {
-    display: block;
-    content: '';
-    clear: both;
-}
-
-@mixin button {
-    height: 40px;
-    line-height: 40px;
-    border: 2px solid transparent;
-    border-radius: 20px;
-    font-family: $montserrat-b;
-    font-size: 14px;
-}
