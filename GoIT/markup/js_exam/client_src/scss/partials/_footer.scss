@@ -1,30 +1,39 @@
 .footer {
-    border-top: 4px solid $auxiliary-color;
     text-align: center;
 
+    border-top: 4px solid $auxiliary-color;
+
     &__title {
-        margin-top: 16px;
-        margin-bottom: 10px;
-        color: $auxiliary-color;
-        text-transform: uppercase;
         font-family: $montserrat-b;
         font-size: 16px;
+
+        margin-top: 18px;
+        margin-bottom: 15px;
+
+        letter-spacing: .8px;
+        text-transform: uppercase;
+
+        color: $auxiliary-color;
     }
 }
 .footer-menu {
-    margin: 0 auto 20px auto;
     overflow: hidden;
+
     width: 194px;
+    margin: 0 auto 15px auto;
 
     &__title {
-        margin-bottom: 10px;
-        color: $additional-text-color;
         font-family: $montserrat-b;
         font-size: 14px;
+
+        margin-bottom: 5px;
+
+        color: $additional-text-color;
     }
 
     &__item {
         float: left;
+
         margin-right: 12px;
 
         &:last-child {
@@ -35,21 +44,27 @@
     &__link {
         font-family: $roboto-l;
         font-size: 14px;
-        color: #666666;
+
         text-align: center;
+
+        color: #666;
     }
 }
 
 .designed-by {
-
     &__text {
         font-family: $montserrat-b;
         font-size: 10px;
-        color: $tile-text-color;
+
+        margin-top: 16px;
+
+        letter-spacing: 1px;
         text-transform: uppercase;
+
+        color: $tile-text-color;
     }
 
     &__logo {
-        margin: 10px 0 18px 0;
+        margin: 8px 0 15px 0;
     }
 }

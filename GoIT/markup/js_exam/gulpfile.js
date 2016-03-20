@@ -20,7 +20,9 @@ var gulp = require('gulp'),
     htmlhint = require('gulp-htmlhint'),
     jscs = require('gulp-jscs'),
     jshint = require('gulp-jshint'),
-    spritesmith = require('gulp.spritesmith'), // дописать
+    buffer = require('vinyl-buffer'),
+    merge = require('merge-stream'),
+    spritesmith = require('gulp.spritesmith'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
 
@@ -37,7 +39,8 @@ var path = {
         html: 'client_src/*.html',
         js: 'client_src/js/main.js',
         css: 'client_src/scss/styles.scss',
-        img: 'client_src/img/**/*.*',
+        img: 'client_src/img/*.*',
+        sprite: 'client_src/img/sprite/*.*',
         fonts: 'client_src/fonts/**/*.*',
         libs: 'client_src/libs/**/*min.js'
     },
@@ -113,10 +116,30 @@ gulp.task('build:images', function () {
                .pipe(reload({stream: true}));
 });
 
-/*gulp.task('build:sprites', function () {
-    return // дописать, возможно придётся использовать run-sequence https://github.com/twolfson/gulp.spritesmith
+gulp.task('build:sprites', function () {
+    var spriteData = gulp.src(path.src.sprite).pipe(spritesmith({
+        imgName: 'sprite.png',
+        cssName: '_sprite.scss',
+        imgPath: '../img/sprite.png',
+        padding: 1
+    }));
+
+    var imgStream = spriteData.img
+        .pipe(buffer())
+        .pipe(imagemin({
+           progressive: true,
+           svgoPlugins: [{removeViewBox: false}],
+           use: [pngquant({quality: '65-80', speed: 4})],
+           interlaced: true
+        }))
+        .pipe(gulp.dest(path.build.img));
+
+    var cssStream = spriteData.css
+        .pipe(gulp.dest('client_src/scss/'));
+
+    return merge(imgStream, cssStream);
 });
-*/
+
 gulp.task('build:fonts', function () {
     return gulp.src(path.src.fonts)
                .pipe(gulp.dest(path.build.fonts))
@@ -134,6 +157,7 @@ gulp.task('build', [
     'build:css',
     'build:js',
     'build:images',
+    'build:sprites',
     'build:fonts',
     'build:libs'
 ]);
