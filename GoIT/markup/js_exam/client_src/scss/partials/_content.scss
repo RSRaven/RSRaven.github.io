@@ -237,6 +237,11 @@
 
     color: $auxiliary-color;
     border-color: $auxiliary-color;
+
+    &:hover {
+        color: $main-text-color;
+        background-color: $auxiliary-color;
+    }
 }
 
 .discover-ideas {
@@ -249,13 +254,9 @@
 }
 
 .tile__heading--ideas {
-    line-height: 120px;
 
-    width: 290px;
-    margin: 0;
-    padding: 0 15px;
-
-    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
 
     color: $main-text-color;
 }
@@ -267,6 +268,12 @@
     margin-bottom: 10px;
 
     border: 1px solid $tile-text-color;
+
+    &:hover {
+        .tile__heading--ideas {
+            color: $tile-text-color;
+        }
+    }
 }
 
 .searcher {
@@ -306,4 +313,9 @@
 
     border-color: $auxiliary-color;
     background-color: $auxiliary-color;
+
+    &:hover {
+        color: $auxiliary-color;
+        background-color: $main-text-color;
+    }
 }

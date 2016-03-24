@@ -32,17 +32,15 @@ var path = {
         js: 'client_build/js/',
         css: 'client_build/css/',
         img: 'client_build/img/',
-        fonts: 'client_build/fonts/',
-        libs: 'client_build/libs/'
+        fonts: 'client_build/fonts/'
     },
     src: {
         html: 'client_src/*.html',
-        js: 'client_src/js/main.js',
+        js: 'client_src/js/vendor.min.js',
         css: 'client_src/scss/styles.scss',
         img: 'client_src/img/*.*',
         sprite: 'client_src/img/sprite/*.*',
-        fonts: 'client_src/fonts/**/*.*',
-        libs: 'client_src/libs/**/*min.js'
+        fonts: 'client_src/fonts/**/*.*'
     },
     style: {
         html: 'client_src/**/*.html',
@@ -146,20 +144,13 @@ gulp.task('build:fonts', function () {
                .pipe(reload({stream: true}));
 });
 
-gulp.task('build:libs', function () {
-    return gulp.src(path.src.libs)
-               .pipe(gulp.dest(path.build.libs))
-               .pipe(reload({stream: true}));
-});
-
 gulp.task('build', [
     'build:html',
     'build:css',
     'build:js',
     'build:images',
     'build:sprites',
-    'build:fonts',
-    'build:libs'
+    'build:fonts'
 ]);
 
 

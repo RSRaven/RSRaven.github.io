@@ -48,6 +48,9 @@
         margin-right: 21px;
         padding: 0 16px;
 
+        &:hover {
+            color: $auxiliary-color;
+        }
 
         &--bordered {
             margin-left: -23px;
@@ -65,4 +68,9 @@
 
     border-color: $auxiliary-color;
     background-color: $auxiliary-color;
+
+    &:hover {
+        color: $auxiliary-color;
+        background-color: $main-text-color;
+    }
 }
